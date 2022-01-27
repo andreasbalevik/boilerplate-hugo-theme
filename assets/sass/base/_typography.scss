@@ -1,0 +1,55 @@
+@import "_size";
+
+@import url('https://fonts.googleapis.com/css?family=Manrope:500,400,300');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 300 !important;
+    line-height: 1.7 !important;
+    text-shadow: 0 0 1px transparent;
+    text-rendering: optimizeSpeed;
+}
+
+h1 {
+    font-size: $size-900;
+}
+
+h2 {
+    font-size: $size-800;
+}
+
+h3 {
+    font-size: $size-700;
+}
+
+h4 {
+    font-size: $size-600;
+}
+
+h5 {
+    font-size: $size-500;
+}
+
+p, a {
+    font-size: $size-400;
+}
+
+label {
+    font-size: $size-200;
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 18px;
+    }
+}

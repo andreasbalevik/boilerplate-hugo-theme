@@ -1,0 +1,52 @@
+.header {
+
+    &__title {
+        a {
+            @extend .navbar-brand;
+            margin:unset;
+            padding:unset;
+        }
+
+        p {
+            margin:unset;
+        }
+    }
+
+    .navigation {
+        @extend .navbar;
+        @extend .navbar-expand-lg;
+        @extend .navbar-light;
+    
+        padding-top:0;
+        padding-bottom:0;
+
+        .navbar-nav {
+            @include tablet(){
+                padding-top:$spacing-lg;
+            }
+        }
+    
+        &__items {
+            @extend .navbar-collapse;
+            @extend .flex-row-reverse;
+    
+            .nav-link {
+                font-size: $size-500!important;
+                padding:unset!important;
+                
+                @include largescreen(){
+                    margin-left:35px;
+                }
+
+                @include tablet(){
+                    margin-top:10px;
+                    margin-bottom:10px;
+                }
+                
+                &:hover {
+                    border-bottom: 1px solid $primary-text-color;
+                }
+            }
+        }
+    }
+}
