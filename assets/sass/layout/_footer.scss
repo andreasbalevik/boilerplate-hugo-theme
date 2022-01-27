@@ -1,3 +1,12 @@
 .footer {
+
+    .row {
+        padding-top: $spacing-xl;
+        padding-bottom: $spacing-xl;
+    }
+    .footer__heading {
+        margin-top:unset;
+        font-size: $size-500;
+    }
    
 }
