@@ -7,7 +7,11 @@
 
     <title>
         {{ block "title" . }}
-            {{ .Site.Title }}
+            {{ if not .Page.IsHome }}
+                {{.Page.Title}} | {{ .Site.Title }}
+            {{ else }}
+                {{ .Site.Title }}
+            {{ end }}
         {{ end }}
     </title>
     
