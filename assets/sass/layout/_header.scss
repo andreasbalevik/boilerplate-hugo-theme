@@ -1,18 +1,14 @@
 .header {
-
     padding-top: $spacing-xxs;
     padding-bottom: $spacing-xxs;
 
     &__title {
-        a {
-            @extend .navbar-brand;
-            margin: unset;
-            padding: unset;
-            font-size: $size-500!important;
-        }
+        @extend .navbar-brand;
+        padding:unset;
 
-        p {
-            margin: unset;
+        a {
+            text-decoration: none;
+            color:$primary-text-color;
         }
     }
 
@@ -35,8 +31,9 @@
             @extend .flex-row-reverse;
 
             .nav-link {
-                font-size: $size-500 !important;
+                font-size: $size-400!important;
                 padding: unset !important;
+                border-bottom: 1px solid transparent;
 
                 @include largescreen() {
                     margin-left: 35px;

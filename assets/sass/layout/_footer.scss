@@ -5,8 +5,8 @@
         padding-bottom: $spacing-xl;
     }
     .footer__heading {
-        margin-top:unset;
-        font-size: $size-500;
+        @extend .navbar-brand;
+        padding:unset;
     }
    
 }
