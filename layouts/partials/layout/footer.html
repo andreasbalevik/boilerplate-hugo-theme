@@ -3,14 +3,27 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="footer__heading">
-                    <a>{{ .Site.Title }}</a>
+                    <a><h3>{{ .Site.Title }}</h3></a>
                 </div>
                 <div class="footer__content">
 
-                    <ul class="footer__links">
-                       
-                    </ul>
+                    {{ range $.Site.Data.Footer.col1.links }}
+                        {{ if .url }}
+                        <li style="list-style: none;">
+                            <a href="{{.url}}">
+                                {{.title}}
+                            </a>
+                        </li>
+                        {{ else }}
+                        <p>{{.title}}</p>
+                        {{ end }}
+                    {{end}}
                 </div>
+            </div>
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-4" style="text-align: right;">
+               Webdesign: Balevik IT & WEB
             </div>
         </div>
     </div>

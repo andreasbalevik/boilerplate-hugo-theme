@@ -2,6 +2,8 @@
     padding-top: $spacing-xxs;
     padding-bottom: $spacing-xxs;
 
+    @extend .box-shadow;
+
     &__title {
         @extend .navbar-brand;
         padding:unset;
