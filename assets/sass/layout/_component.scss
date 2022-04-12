@@ -1,5 +1,19 @@
 .component {
-    background-color: $component-color;
+
+    &:nth-child(even){
+        background-color: $component-color;
+    }
+
+    .row {
+        @extend .m-0;
+        @extend .p-0;
+    }
+
     padding-top: $spacing-xl*2;
     padding-bottom: $spacing-xl*2;
+
+    @include tablet(){
+        padding-top: $spacing-xl;
+        padding-bottom: $spacing-xl;
+    }
 }
