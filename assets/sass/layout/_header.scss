@@ -2,6 +2,12 @@
     padding-top: $spacing-xxs;
     padding-bottom: $spacing-xxs;
 
+    p, a {
+        font-size: $size-400;
+    }
+
+    @extend .box-shadow;
+
     &__title {
         @extend .navbar-brand;
         padding:unset;

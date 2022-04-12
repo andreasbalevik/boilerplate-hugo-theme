@@ -1,14 +1,19 @@
 .row {
-    padding-top: $spacing-xl*2.5;
-    padding-bottom: $spacing-xl*2.5;
+    padding-top: $spacing-xl*2;
+    padding-bottom: $spacing-xl*2;
 
     @include tablet() {
-        padding-top: $spacing-xl*2;
-        padding-bottom: $spacing-xl*2;
+        padding-top: $spacing-xl*1.5;
+        padding-bottom: $spacing-xl*1.5;
     }
 
     @include mobile() {
-        padding-top: $spacing-xl*1.5;
-        padding-bottom: $spacing-xl*1.5;
+        padding-top: $spacing-xl*1;
+        padding-bottom: $spacing-xl*1;
+    }
+
+    &--img {
+        padding-top:$spacing-xl;
+        padding-bottom:$spacing-xl;
     }
 }
