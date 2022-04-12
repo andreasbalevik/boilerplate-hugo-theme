@@ -1,19 +1,19 @@
 .row {
-    padding-top: $spacing-xl*2;
-    padding-bottom: $spacing-xl*2;
+    margin-top: $spacing-xl*2;
+    margin-bottom: $spacing-xl*2;
 
     @include tablet() {
-        padding-top: $spacing-xl*1.5;
-        padding-bottom: $spacing-xl*1.5;
+        margin-top: $spacing-xl*1.5;
+        margin-bottom: $spacing-xl*1.5;
     }
 
     @include mobile() {
-        padding-top: $spacing-xl*1;
-        padding-bottom: $spacing-xl*1;
+        margin-top: $spacing-xl*1;
+        margin-bottom: $spacing-xl*1;
     }
 
     &--img {
-        padding-top:$spacing-xl;
-        padding-bottom:$spacing-xl;
+        margin-top:$spacing-xl;
+        margin-bottom:$spacing-xl;
     }
 }

@@ -18,6 +18,7 @@
     .row {
         padding-top: $spacing-xl*2;
         padding-bottom: $spacing-xl*2;
+        margin:unset;
     }
     .footer__heading {
         @extend .navbar-brand;

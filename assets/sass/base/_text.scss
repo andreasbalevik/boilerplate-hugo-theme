@@ -33,3 +33,27 @@
     font-weight: 400!important;
     line-height: 1.7!important;
  }
+
+ .header-xl {
+     font-size: $size-900;
+     font-weight: 500;
+     line-height: 1.3;
+ }
+
+ .header-lg {
+    font-size: $size-800;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.header-md {
+    font-size: $size-700;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.header-sm {
+    font-size: $size-600;
+    font-weight: 500;
+    line-height: 1.3;
+}
