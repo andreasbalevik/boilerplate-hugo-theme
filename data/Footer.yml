@@ -1,5 +1,4 @@
 col1:
   links:
-    - title: "Org. 123456789"
-    - title: "test@domain.com"
-      url: "mamilto:test@domain.com"
+    - title: "Some text"
+      url: "#"

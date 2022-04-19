@@ -55,6 +55,14 @@
                     border-bottom: 1px solid $primary-text-color;
                 }
             }
+
+            .active {
+                border-bottom: 1px solid $primary-text-color;
+
+                @include tablet() {
+                    border-bottom: 1px solid transparent;
+                }
+            }
         }
     }
 }
