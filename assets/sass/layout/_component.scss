@@ -9,11 +9,11 @@
         @extend .p-0;
     }
 
-    padding-top: $spacing-xl*2;
-    padding-bottom: $spacing-xl*2;
+    padding-top: $size-lg*2;
+    padding-bottom: $size-lg*2;
 
     @include tablet(){
-        padding-top: $spacing-xl;
-        padding-bottom: $spacing-xl;
+        padding-top: $size-lg;
+        padding-bottom: $size-lg;
     }
 }

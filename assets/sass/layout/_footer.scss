@@ -1,13 +1,4 @@
-.footer {
-
-    h1, h2, h3 {
-        font-size: 1.2rem!important;
-    }
-    
-    p, a, label {
-        font-size: 1rem!important;
-    }
-
+.footer {    
     background-color: $footer-color;
     color: white;
 
@@ -16,9 +7,10 @@
     }
 
     .row {
-        padding-top: $spacing-xl*2;
-        padding-bottom: $spacing-xl*2;
-        margin:unset;
+        padding-top: $size-lg*3;
+        padding-bottom: $size-lg*2;
+        margin-top:unset;
+        margin-bottom: unset;
     }
     .footer__heading {
         @extend .navbar-brand;
@@ -28,7 +20,7 @@
     @include tablet(){
         .footer__item {
             text-align: left!important;
-            margin-bottom: $spacing-lg;
+            margin-bottom: $size-lg;
         }
     }
    

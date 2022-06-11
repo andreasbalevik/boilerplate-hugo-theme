@@ -1,11 +1,6 @@
 .header {
-    font-size:18px!important;
-    padding-top: $spacing-xxs;
-    padding-bottom: $spacing-xxs;
-
-    p, a {
-        font-size: $size-400;
-    }
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     @extend .box-shadow;
 
@@ -16,6 +11,7 @@
         a {
             text-decoration: none;
             color:$primary-text-color;
+            font-size:$size-md;
         }
     }
 
@@ -29,7 +25,7 @@
 
         .navbar-nav {
             @include tablet() {
-                padding-top: $spacing-lg;
+                padding-top: $size-lg;
             }
         }
 
@@ -38,13 +34,11 @@
             @extend .flex-row-reverse;
 
             .nav-link {
-                font-size: $size-400!important;
+                color:$primary-text-color!important;
                 padding: unset !important;
                 border-bottom: 1px solid transparent;
-
-                @include largescreen() {
-                    margin-left: 35px;
-                }
+                margin-left: 35px;
+                font-size: $size-sm*1.5;
 
                 @include tablet() {
                     margin-top: 10px;
