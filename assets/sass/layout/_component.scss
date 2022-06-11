@@ -4,16 +4,25 @@
         background-color: $component-color;
     }
 
-    .row {
-        @extend .m-0;
-        @extend .p-0;
-    }
-
     padding-top: $size-lg*2;
     padding-bottom: $size-lg*2;
 
-    @include tablet(){
+    @include tablet() {
         padding-top: $size-lg;
         padding-bottom: $size-lg;
     }
+
+    .row {
+        @extend .mb-0;
+        @extend .mt-0;
+        @extend .pb-0;
+        @extend .pt-0;
+
+        &:not(:last-of-type){
+            margin-bottom: $size-lg!important;
+        }
+    }
+
+
+
 }
