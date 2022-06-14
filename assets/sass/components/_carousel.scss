@@ -1,0 +1,27 @@
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: brightness(80%);
+    opacity: 1!important;
+}
+
+.carousel-inner {
+    background:transparent;
+
+    img {
+        display: block;
+        margin:auto;
+        opacity:0.95;
+        height:600px;
+        width:auto;
+        object-fit:cover!important;
+
+        @include tablet(){
+            height:500px;
+        }
+
+        @include mobile(){
+            height: 350px;
+        }
+    }
+}

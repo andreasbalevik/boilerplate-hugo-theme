@@ -25,7 +25,7 @@
 
         .navbar-nav {
             @include tablet() {
-                padding-top: $size-lg;
+                padding-top: $size-md;
             }
         }
 
@@ -43,6 +43,11 @@
                 @include tablet() {
                     margin-top: 10px;
                     margin-bottom: 10px;
+                    margin-left:unset!important;
+                    
+                    &::before {
+                        content: '>'
+                    }
                 }
 
                 &:hover {
