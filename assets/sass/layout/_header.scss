@@ -2,8 +2,8 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: white;
-    
-    @extend .box-shadow;
+    margin-bottom: 20px;
+    margin-top:50px;
 
     &__title {
         @extend .navbar-brand;

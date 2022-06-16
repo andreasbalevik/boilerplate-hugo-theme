@@ -1,0 +1,18 @@
+.banner {
+
+    .row {
+        margin-top: unset;
+        margin-bottom: unset;
+    }
+
+    &__image {
+        width:100%;
+        object-fit: cover!important;
+        max-height: 538px!important;
+        min-height: 400px!important;
+
+        @include largescreen(){
+            max-height: 650px!important;
+        }
+    }
+}
