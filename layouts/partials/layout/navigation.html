@@ -2,6 +2,10 @@
 
 <div class="collapse navbar-collapse flex-row-reverse" id="navbarToggler">
 
+    <div class="navigation__actions">
+        <a href="">Kontakt oss </a>
+    </div>
+
     {{ $currentPage := . }}
     {{ $section := .Site.GetPage $currentPage.Section }}
 
@@ -14,5 +18,7 @@
         </li>
         {{end}}
     </ul>
+
+    
 
 </div>

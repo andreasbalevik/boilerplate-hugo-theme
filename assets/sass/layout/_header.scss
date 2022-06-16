@@ -1,17 +1,18 @@
 .header {
     padding-top: 1rem;
     padding-bottom: 1rem;
-
+    background-color: white;
+    
     @extend .box-shadow;
 
     &__title {
         @extend .navbar-brand;
-        padding:unset;
+        padding: unset;
 
         a {
             text-decoration: none;
-            color:$primary-text-color;
-            font-size:$size-md;
+            color: $primary-text-color;
+            font-size: $size-md;
         }
     }
 
@@ -34,7 +35,7 @@
             @extend .flex-row-reverse;
 
             .nav-link {
-                color:$primary-text-color!important;
+                color: $primary-text-color !important;
                 padding: unset !important;
                 border-bottom: 1px solid transparent;
                 margin-left: 35px;
@@ -43,8 +44,8 @@
                 @include tablet() {
                     margin-top: 10px;
                     margin-bottom: 10px;
-                    margin-left:unset!important;
-                    
+                    margin-left: unset !important;
+
                     &::before {
                         content: '>'
                     }
@@ -57,10 +58,32 @@
 
             .active {
                 border-bottom: 1px solid $primary-text-color;
+                font-weight: 400;
 
                 @include tablet() {
                     border-bottom: 1px solid transparent;
                 }
+            }
+        }
+
+        &__actions {
+            margin-left: 35px;
+
+            a {
+                border: 1px solid black;
+                border-radius: 25px;
+                padding: 5px 25px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: $primary-text-color;
+                    color: white;
+                }
+            }
+
+            @include tablet() {
+                margin-left: unset !important;
+                margin-top: 20px;
             }
         }
     }
