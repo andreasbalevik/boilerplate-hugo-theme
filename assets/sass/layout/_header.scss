@@ -3,7 +3,7 @@
     padding-bottom: 1rem;
     background-color: white;
     margin-bottom: 20px;
-    margin-top:50px;
+
 
     &__title {
         @extend .navbar-brand;
@@ -17,6 +17,7 @@
     }
 
     .navigation {
+        margin-top:50px;
         @extend .navbar;
         @extend .navbar-expand-lg;
         @extend .navbar-light;
