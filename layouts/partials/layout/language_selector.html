@@ -1,0 +1,11 @@
+    <div class="language">
+        <div class="container" style="text-align: right;">
+            <ul class="language__items">
+                    {{ range .Translations }}
+                    <li class="language__item">
+                        <a href="{{.Permalink}}" class="{{.Language}}">{{.Language.LanguageName | upper}}</a>
+                    </li>
+                    {{end}}
+            </ul>
+        </div>
+    </div>
