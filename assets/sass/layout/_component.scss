@@ -4,10 +4,6 @@
         background-color: $component-color;
     }
 
-    &:first-of-type {
-        padding-top:unset!important;
-    }
-
     padding-top: $size-lg*2;
     padding-bottom: $size-lg*2;
 

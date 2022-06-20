@@ -15,10 +15,24 @@
             color: $primary-text-color;
             font-size: 120%;
 
+            @include mobile(){
+                font-size: 100%;
+            }
+
             &:hover {
                 color: $secondary-text-color;
             }
         }
+    }
+
+    .line {
+        background-color: $primary-signal-color;
+        border-radius: 25px;
+        height: 9px;
+        width: 100%;
+        display: block;
+        max-width: 56%;
+        margin-top:$size-sm
     }
 
     .navigation {
@@ -71,25 +85,27 @@
             }
         }
 
-        &__actions {
-            margin-left: 35px;
+        
+    }
+}
 
-            a {
-                border: 1px solid black;
-                border-radius: 25px;
-                padding: 5px 25px;
-                text-decoration: none;
+.navigation__actions {
+    margin-left: 35px;
 
-                &:hover {
-                    background-color: $primary-text-color;
-                    color: white;
-                }
-            }
+    a {
+        border: 1px solid black;
+        border-radius: 25px;
+        padding: 5px 25px;
+        text-decoration: none;
 
-            @include tablet() {
-                margin-left: unset !important;
-                margin-top: 20px;
-            }
+        &:hover {
+            background-color: $primary-text-color;
+            color: white;
         }
+    }
+
+    @include tablet() {
+        margin-left: unset !important;
+        margin-top: 20px;
     }
 }
