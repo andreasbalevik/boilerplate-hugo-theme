@@ -8,15 +8,16 @@
                 <div class="footer__content">
 
                     {{ range $.Site.Data.Footer.col1.links }}
-                        {{ if .url }}
-                        <li style="list-style: none;">
+                        
+                        <li class="{{.class}}">
+                            {{ if .url }}
                             <a href="{{.url}}">
                                 {{.title}}
                             </a>
-                        </li>
-                        {{ else }}
-                        <p>{{.title}}</p>
-                        {{ end }}
+                            {{ else }}
+                                <span>{{.title}}</span>
+                            {{ end }}
+
                     {{end}}
                 </div>
             </div>

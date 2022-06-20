@@ -11,7 +11,7 @@
     {{ $section := .Site.GetPage $currentPage.Section }}
 
     <ul class="navbar-nav mb-2 mb-lg-0">
-        {{ range .Site.Menus.main }}
+        {{ range sort .Site.Menus.main.ByWeight }}
         <li class="nav-item">
             <a class="nav-link {{if $section.IsMenuCurrent "main" . }}active{{end}}" aria-current="page" href="{{ .URL }}">
                 {{ .Name }}

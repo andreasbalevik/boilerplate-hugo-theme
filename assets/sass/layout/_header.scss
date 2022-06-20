@@ -1,9 +1,10 @@
 .header {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: $size-lg;
+    padding-bottom: $size-lg;
     background-color: white;
     margin-bottom: 20px;
 
+    border-bottom: 1px solid whitesmoke;
 
     &__title {
         @extend .navbar-brand;
@@ -12,12 +13,16 @@
         a {
             text-decoration: none;
             color: $primary-text-color;
-            font-size: $size-md;
+            font-size: 120%;
+
+            &:hover {
+                color: $secondary-text-color;
+            }
         }
     }
 
     .navigation {
-        margin-top:50px;
+        margin-top:$size-lg;
         @extend .navbar;
         @extend .navbar-expand-lg;
         @extend .navbar-light;
@@ -40,7 +45,6 @@
                 padding: unset !important;
                 border-bottom: 1px solid transparent;
                 margin-left: 35px;
-                font-size: $size-sm*1.5;
 
                 @include tablet() {
                     margin-top: 10px;

@@ -1,3 +1,10 @@
 .container {
-    max-width:1821px!important;
+    max-width:1704px!important;
+    padding-left: $size-lg!important;
+    padding-right: $size-lg!important;
+
+    @include mobile(){
+        padding-left: $size-sm!important;
+        padding-right: $size-sm!important;
+    }
 }

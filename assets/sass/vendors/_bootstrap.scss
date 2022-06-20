@@ -1,1 +1,8 @@
 @import "bootstrap/scss/bootstrap.scss";
+@import "base/size";
+
+.footer {
+    .bi::before {
+        margin-right: $size-sm;
+    }
+}

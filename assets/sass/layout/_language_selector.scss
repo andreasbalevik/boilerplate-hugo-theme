@@ -16,10 +16,14 @@
             text-decoration: none;
             font-size: 1.05rem;
             color:$secondary-text-color!important;
+
+            &:hover {
+                color: $primary-text-color!important;
+            }
         }
     }
 
-    .nb {
+    .nb, .no {
         &::before {
             margin-right: 6px;
             background-image: url("https://flagcdn.com/h20/no.png");
@@ -35,6 +39,18 @@
         &::before {
             margin-right: 6px;
             background-image: url("https://flagcdn.com/h20/gb.png");
+            background-size: 20px 13px;
+            display: inline-block;
+            width: 20px; 
+            height: 13px;
+            content:"";
+        }
+    }
+
+    .de {
+        &::before {
+            margin-right: 6px;
+            background-image: url("https://flagcdn.com/h20/de.png");
             background-size: 20px 13px;
             display: inline-block;
             width: 20px; 
