@@ -2,10 +2,7 @@
 
 <div class="collapse navbar-collapse flex-row-reverse" id="navbarToggler">
 
-    <div class="navigation__actions">
-        <a href="">{{ i18n "contact-us" }}
-        </a>
-    </div>
+    {{ partial "components/contact-us.html" }}
 
     {{ $currentPage := . }}
     {{ $section := .Site.GetPage $currentPage.Section }}
