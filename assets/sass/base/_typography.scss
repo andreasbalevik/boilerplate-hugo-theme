@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Inter:300,400');
 @import "mixin/mixin";
 @import "base/size";
 
@@ -15,17 +16,22 @@ html {
 
 }
 
+.ingress {
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
   background: white;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  line-height: 1.65;
+  line-height: 1.67;
   color: #1b2838;
 
 }
 
 p,a,li {
-    font-size:1.15rem;
+    font-size: $size-md;
+    font-family: "Inter";
 }
 
 p {
@@ -33,7 +39,7 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 0 0 1rem 0;
+  margin: 3rem 0 1rem 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.65;

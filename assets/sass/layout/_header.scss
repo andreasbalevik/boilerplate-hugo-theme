@@ -1,11 +1,7 @@
 .header {
     padding-top: $size-lg;
-    padding-bottom: $size-lg;
+    margin-bottom: $size-lg;
     background-color: white;
-    margin-bottom: 20px;
-
-
-    border-bottom: 1px solid rgba(220, 220, 220, 0.458);
 
     &__title {
         @extend .navbar-brand;
@@ -24,16 +20,6 @@
                 color: $secondary-text-color;
             }
         }
-    }
-
-    .line {
-        background-color: $primary-signal-color;
-        border-radius: 25px;
-        height: 9px;
-        width: 100%;
-        display: block;
-        max-width: 56%;
-        margin-top:$size-sm;
     }
 
     .navigation__actions {
