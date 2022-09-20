@@ -1,0 +1,9 @@
+{{ $image := resources.GetMatch .image_input }}
+{{ $image_large := $image.Fill "1700x600 q100" }}
+{{ $image_mlarge := $image.Fill "1000x350 q100" }}
+{{ $image_medium := $image.Fill "900x350 q100" }}
+{{ $image_small := $image.Fill "400x400 q100" }}
+
+<img class="banner__image" sizes="50vw" width="{{ $image_large.Width }}" height="{{ $image_large.Height }}"
+srcSet="{{$image_small.RelPermalink}} 400w, {{$image_medium.RelPermalink}} 900w, 
+{{$image_mlarge.RelPermalink}} 1000w, {{$image_large.RelPermalink}} 1700w ">

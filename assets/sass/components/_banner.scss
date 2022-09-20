@@ -6,11 +6,7 @@
     }
 
     &__image {
-        width:100%;
-        object-fit: cover!important;
-        max-height: 600px!important;
         min-height: 400px!important;
-
-
+        max-height: 600px!important;
     }
 }
