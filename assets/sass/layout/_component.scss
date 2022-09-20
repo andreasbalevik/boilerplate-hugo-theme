@@ -4,25 +4,21 @@
         background-color: $component-color;
     }
 
-    padding-top: $size-lg*2;
-    padding-bottom: $size-lg*2;
+    padding-top: $size-xl*2;
+    padding-bottom: $size-xl*2;
 
     @include tablet() {
-        padding-top: $size-lg;
-        padding-bottom: $size-lg;
+        padding-top: $size-xl;
+        padding-bottom: $size-xl;
     }
 
     .row {
-        @extend .mb-0;
-        @extend .mt-0;
-        @extend .pb-0;
-        @extend .pt-0;
+        &:last-of-type{
+            margin-bottom: 0!important;
+        }
 
-        &:not(:last-of-type){
-            margin-bottom: $size-lg!important;
+        &:first-of-type {
+            margin-top: 0!important;
         }
     }
-
-
-
 }

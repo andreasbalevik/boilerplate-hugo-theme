@@ -15,13 +15,13 @@ body {
   background: white;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  line-height: 1.67;
+  line-height: 1.65;
   color: #1b2838;
 
 }
 
 p,a,li {
-    font-size: $size-md;
+    font-size: $text;
     font-family: "Inter", sans-serif;
 }
 
@@ -30,10 +30,10 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 3rem 0 1rem 0;
+  margin: 0 0 1rem 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.5;
 
   @include tablet(){
     font-size: calc(1.6em + 1vmin)!important;
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-margin-top: 0;
+margin-bottom: $size-md;
 font-size: $heading-h1;
 font-weight: 500;
 }
