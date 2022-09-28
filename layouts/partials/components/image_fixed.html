@@ -1,0 +1,6 @@
+{{ $image := resources.GetMatch .image_input }}
+{{ $image_large := $image.Fill "600x400 q100" }}
+{{ $image_medium := $image.Fill "400x300 q100" }}
+{{ $image_small := $image.Fill "200x150 q100" }}
+<img class="img-thumbnail" sizes="50vw" width="{{ $image_large.Width }}" height="{{ $image_large.Height }}"
+srcSet="{{$image_small.RelPermalink}} 400w, {{$image_medium.RelPermalink}} 600w, {{$image_large.RelPermalink}} 800w ">

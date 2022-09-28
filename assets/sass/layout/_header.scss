@@ -1,7 +1,55 @@
 .header {
     padding-top: $size-lg;
-    margin-bottom: $size-md;
+    margin-bottom: $size-lg;
     background-color: white;
+
+    .header__title,
+    .navbar-toggler {
+        z-index: 1;
+    }
+
+    .modal-backdrop {
+        z-index: 1;
+    }
+
+    .language__items {
+        @include tablet(){
+            display: none;
+        }
+    }
+
+    .offcanvas {
+        display: none;
+
+        @include tablet(){
+            display: block;
+        }
+
+        #offcanvasRightLabel {
+            margin:unset!important;
+        }
+
+        .navbar-nav {
+            @include tablet(){
+                margin-top:20px;
+            }
+        }
+
+        .language__items {
+
+            padding-left: unset!important;
+            float:left;
+            margin-top:20px;
+
+            li {
+                margin-left:7px!important;
+            }
+
+            @include tablet(){
+                display: block!important;
+            }
+        }
+    }
 
     &__title {
         @extend .navbar-brand;
@@ -47,6 +95,16 @@
         &__items {
             @extend .navbar-collapse;
             @extend .flex-row-reverse;
+        
+            .container {
+                padding:unset;
+
+                @include tablet(){
+                    padding-right: var(--bs-gutter-x,.75rem);
+                    padding-left: var(--bs-gutter-x,.75rem);
+                }
+
+            }
 
             .nav-link {
                 color: $primary-text-color !important;

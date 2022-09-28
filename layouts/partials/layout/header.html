@@ -9,12 +9,15 @@
                     {{ .Site.Title }}
                 </a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
-                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="navigation__items">
-                {{ partial "layout/navigation.html" . }}
+                <div class="container">
+                    {{ partial "layout/navigation.html" . }}
+                </div>
             </div>
         </div>
     </nav>

@@ -2,3 +2,5 @@
   translation: "Kontakt oss"
 - id: image
   translation: "Bilde"
+- id: menu
+  translation: "Meny"
