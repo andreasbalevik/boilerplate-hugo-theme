@@ -1,7 +1,35 @@
-$size-sm: 0.625rem;
-$size-md: 1.4rem;
-$size-lg: 2.6rem;
-$size-xl: 4.8rem;
+$size-df: 1rem;
+$size-sm: $size-df * .5;
+$size-md: $size-df;
+$size-lg: $size-df * 2;
+$size-xl: $size-df * 4;
+$size-xxl: $size-df * 6;
+
+.width-sm {
+    width: $size-sm;
+    height: 25px;
+}
+
+.width-md {
+    width: $size-md;
+    height: 25px;
+}
+
+.width-lg {
+    width: $size-lg;
+    height: 25px;
+}
+
+.width-xl {
+    width: $size-xl;
+    height: 25px;
+}
+
+.width-xxl {
+    width: $size-xxl;
+    height: 25px;
+}
+
 
 $heading-h1: 3.35rem;
 $heading-h2: 2.35rem;
