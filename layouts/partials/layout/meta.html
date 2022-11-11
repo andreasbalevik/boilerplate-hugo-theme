@@ -1,14 +1,14 @@
-<title itemprop="name">{{ .Title }} | {{ .Site.Title }}</title>
-<base href="{{ .Permalink }}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="robots" content="index,follow">
 
-<link rel="prefetch" href="{{ .Permalink }}" />
+<title itemprop="name">{{ .Title }}</title>
+
 <meta name="apple-mobile-web-app-title" content="{{ .Title }}">
-
 <meta name="theme-color" content="#FFFFFF">
-
 <meta name="description" content="{{ .Params.description }}" />
-<link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
-<meta name="language" content="{{ .Language.LanguageName }}">
+<meta name="keywords" content="{{ with .Site.Params.keywords }}{{ delimit . ", "}}{{ end }}, {{ with .Params.keywords }}{{ delimit . ", "}}{{ end }}" />
 
 {{ with .Params.image }} 
   <meta itemprop="image" content="{{ . | absURL }}" />
@@ -18,14 +18,9 @@
   <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
 {{ end }}
 
-<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" /> 
-
+<meta http-equiv="content-language" content="{{ .Site.Language }}">
+<meta property="og:title" content="{{ .Title }}" />
+<meta name="og:description" content="{{ .Params.description }}" />
 <meta property="og:type" content="website" /> 
-<meta name="robots" content="index,follow" /> 
-<meta name="googlebot" content="index,follow" />
-
-{{ range .AllTranslations }}
-  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
-{{ end }}
-
-
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="{{ .Site.Language }}">

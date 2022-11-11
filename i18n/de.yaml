@@ -2,3 +2,5 @@
   translation: "Kontakt"
 - id: image
   translation: "Bild"
+- id: home
+  translation: "Heimat"

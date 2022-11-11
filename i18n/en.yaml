@@ -4,3 +4,5 @@
   translation: "Image"
 - id: menu
   translation: "Menu"
+- id: home
+  translation: "Home"

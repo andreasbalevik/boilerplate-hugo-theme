@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ .Site.Language }}">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    {{ partial "layout/meta.html" . }}
-
-    {{ partial "layout/links.html" . }}
 
     <title>
         {{ block "title" . }}
         {{ if not .Page.IsHome }}
-        {{.Page.Title}} | {{ .Site.Title }}
+        {{.Page.Title}}
         {{ else }}
         {{ .Site.Title }}
         {{ end }}
         {{ end }}
     </title>
-    {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
-    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | resources.Minify }}
 
+    {{ partial "layout/meta.html" . }}
+    {{ partial "layout/links.html" . }}
     {{ partial "layout/head.html" . }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
 </head>
 
 <body>
@@ -39,11 +33,6 @@
 
 </body>
 
-<link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css?display=swap"/>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
+{{ partial "layout/script.html" . }}
 
 </html>
