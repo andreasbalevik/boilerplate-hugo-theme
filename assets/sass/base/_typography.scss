@@ -11,14 +11,6 @@ p, a, li, span, label {
   font-weight: 400;
 }
 
-h1 {
-  font-size: 2.75rem;
-
-  @include tablet(){
-    font-size: 2.5rem;
-  }
-}
-
 h1+p, h1+p+a {
   font-size: 22px!important;
 
