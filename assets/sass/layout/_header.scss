@@ -7,8 +7,13 @@ header {
 
     .navbar {
 
+        .btn {
+            margin: unset;
+            font-size: 1rem!important;
+        }
+
         .nav-link {
-            font-size: 1.25rem !important;
+            font-size: 1rem !important;
             padding-right: .8rem!important;
             padding-left: .8rem!important;
 
