@@ -8,8 +8,9 @@ header {
     .navbar {
 
         .nav-link {
-
             font-size: 1.25rem !important;
+            padding-right: .8rem!important;
+            padding-left: .8rem!important;
 
             @include tablet() {
 
