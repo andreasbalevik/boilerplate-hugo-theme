@@ -3,6 +3,10 @@ header {
 
     .navbar-brand {
         margin-right: 40px;
+
+        @include tablet(){
+            font-size: 18px!important;
+        }
     }
 
     .navbar {
