@@ -1,10 +1,18 @@
 header {
     padding: 8px 0;
 
+    .navbar-brand {
+        margin-right: 40px;
+    }
 
     .navbar {
-        @include tablet() {
-            .nav-link {
+
+        .nav-link {
+
+            font-size: 1.25rem !important;
+
+            @include tablet() {
+
                 &::before {
                     font-family: 'bootstrap-icons';
                     content: '\F27B';
