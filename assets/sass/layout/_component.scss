@@ -4,8 +4,8 @@
         background-color: $component-color;
     }
 
-    padding-top: $size-xl*1.5;
-    padding-bottom: $size-xl*1.5;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 
     @include tablet() {
         padding-top: $size-xl;
