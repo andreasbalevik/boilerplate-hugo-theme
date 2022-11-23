@@ -6,3 +6,5 @@
   translation: "Menu"
 - id: home
   translation: "Home"
+- id: language
+  translation: "Language"

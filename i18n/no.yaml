@@ -6,3 +6,5 @@
   translation: "Meny"
 - id: home
   translation: "Hjem"
+- id: language
+  translation: "Språk"

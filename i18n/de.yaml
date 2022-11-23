@@ -4,3 +4,5 @@
   translation: "Bild"
 - id: home
   translation: "Heimat"
+- id: language
+  translation: "Sprache" 

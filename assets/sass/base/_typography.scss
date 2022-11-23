@@ -3,104 +3,26 @@
 @import "mixin/mixin";
 @import "base/size";
 
-$heading-font: 'Poppins';
-$text-font: 'Inter';
-
 html {
-  font-size: 101%;
-  /*16px*/
+  font-size: 16px;
+}
+p, a, li, span, label {
+  font-size: 18px;
+  font-weight: 400;
 }
 
-.ingress {
-  font-family: $text-font, sans-serif;
-  font-size: $text + 0.16rem;
-
-  &--bold {
-    font-weight: 500!important;
-  }
+h1+p {
+  font-size: 22px;
 }
 
 body {
   background: white;
-  font-family: $heading-font, sans-serif;
-  font-weight: 300;
-  line-height: 1.67;
-  color: #1b2838;
+  font-family: 'Inter', sans-serif;
+  color: #1c2f46;
+  line-height: 1.66;
 }
 
-p,
-a,
-li {
-  font-size: $text;
-  font-family: $text-font, sans-serif;
-}
-
-p {
-  margin-bottom: $size-md;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0 0 $size-md 0;
-  font-family: $heading-font, sans-serif;
-  font-weight: 400;
-  line-height: 1.2;
-
-  @include tablet() {
-    font-size: calc(1.6em + 1vmin) !important;
-  }
-}
-
-h1 {
-  margin-bottom: $size-lg;
-  font-size: $heading-h1;
-  font-weight: 500;
-  line-height: 1.11;
-
-  @include tablet() {
-    font-size: calc(#{$heading-h1} / 1.7 + 1vmin) !important;
-  }
-}
-
-h2 {
-  font-size: $heading-h2;
-
-  @include tablet() {
-    font-size: calc(#{$heading-h2} / 1.7 + 1vmin) !important;
-  }
-}
-
-h3 {
-  font-size: $heading-h3;
-  margin-bottom: $size-sm;
-
-  @include tablet() {
-    font-size: calc(#{$heading-h3} / 1.7 + 1vmin) !important;
-  }
-}
-
-h4 {
-  font-size: $heading-h4;
-  margin-bottom: $size-sm;
-
-  @include tablet() {
-    font-size: calc(#{$heading-h4} / 1.7 + 1vmin) !important;
-  }
-}
-
-h5 {
-  font-size: $heading-h5;
-  margin-bottom: $size-sm;
-
-  @include tablet() {
-    font-size: calc(#{$heading-h5} / 1.7 + 1vmin) !important;
-  }
-}
-
-small,
-.text_small {
-  font-size: 0.833rem;
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
 }

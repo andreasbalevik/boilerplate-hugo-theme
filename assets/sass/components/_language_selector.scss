@@ -1,14 +1,6 @@
 .language {
 
-    margin-bottom: $size-md;
-
-    &__items {
-        text-decoration: none;
-        list-style: none;
-    }
-
     &__item {
-        margin-left: $size-md;
         display: inline;
 
         a {
