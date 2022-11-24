@@ -1,4 +1,6 @@
 {{ $image := resources.GetMatch .image_input }}
-{{ $image_large := $image.Resize "600x350 q100" }}
-
-<img class="img-fluid" src="{{$image_large.RelPermalink}}" sizes="50vw" width="{{ $image_large.Width }}" height="{{ $image_large.Height }}">
+{{ $image_large := $image.Resize "950x550 q80" }}
+{{ $image_tablet := $image.Resize "650x420 q90" }}
+{{ $image_mobile := $image.Resize "400x250 q100" }}
+<img width="{{ $image_large.Width }}" height="{{ $image_large.Height }}"
+srcSet="{{$image_mobile.RelPermalink}} 400w, {{$image_tablet.RelPermalink}} 650w, {{$image_large.RelPermalink}} 950w ">
