@@ -17,12 +17,13 @@ header {
         }
 
         .nav-link {
-            font-size: 1rem !important;
+            font-size: 1rem;
             padding-right: .8rem!important;
             padding-left: .8rem!important;
 
             @include tablet() {
 
+                font-size: 1.1rem;
                 &::before {
                     font-family: 'bootstrap-icons';
                     content: '\F27B';
