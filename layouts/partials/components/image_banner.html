@@ -1,11 +1,13 @@
 {{ $image := resources.GetMatch .image_input }}
-{{ $image_large := $image.Fill "1920x500 q95" }}
-{{ $image_mlarge := $image.Fill "1300x500 q100" }}
-{{ $image_medium := $image.Fill "900x450 q100" }}
-{{ $image_small := $image.Fill "400x400 q100" }}
 
-<div class="banner">
-    <img class="banner__image" sizes="50vw" width="{{ $image_large.Width }}" height="{{ $image_large.Height }}"
-    srcSet="{{$image_small.RelPermalink}} 400w, {{$image_medium.RelPermalink}} 900w, 
-    {{$image_mlarge.RelPermalink}} 1000w, {{$image_large.RelPermalink}} 1700w ">
+{{ $image_large := $image.Fill "1300x550 q95" }}
+{{ $image_tablet := $image.Fill "768x450 q100" }}
+{{ $image_mobile := $image.Fill "350x250 q100" }}
+
+<div class="container">
+    <picture>
+        <source media="(min-width:992px)" srcSet="{{$image_large.RelPermalink}}">
+        <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
+        <img src="{{$image_mobile.RelPermalink}}">
+    </picture>
 </div>
