@@ -1,8 +1,3 @@
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    background-color: rgba(0, 0, 0, 0.177);
-}
-
 .carousel-inner {
     background:transparent;
 
@@ -14,3 +9,9 @@
     }
 }
 
+.carousel-control-prev, .carousel-control-prev, .carousel-control-next, .carousel-control-next {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9;
+  }
