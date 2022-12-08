@@ -5,6 +5,7 @@ header {
     left: 0;
     right: 0;
     background-color: #fff;
+    z-index: 100000;
 
     @extend .shadow-sm;
     border-bottom: 1px solid lightgrey;
@@ -12,8 +13,8 @@ header {
     @include tablet() {
         .container {
             padding: unset !important;
-            margin: unset !important;
-            max-width: unset;
+            margin: auto !important;
+
         }
 
         .mobile-container {
