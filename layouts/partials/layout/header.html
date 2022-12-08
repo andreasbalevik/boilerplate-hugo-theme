@@ -1,13 +1,16 @@
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="{{ .Site.Home.Permalink }}">
-                {{ .Site.Title }}
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
+            <div class="mobile-container d-flex justify-content-between">
+                <a class="navbar-brand" href="{{ .Site.Home.Permalink }}">
+                    {{ .Site.Title }}
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 {{ $currentPage := . }}
                 {{ $section := .Site.GetPage $currentPage.Section }}

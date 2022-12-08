@@ -1,33 +1,68 @@
 header {
-    padding: 8px 0;
+    padding: 2px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
 
-    .navbar-brand {
-        margin-right: 40px;
+    @extend .shadow-sm;
+    border-bottom: 1px solid lightgrey;
 
-        @include tablet(){
-            font-size: 18px!important;
+    @include tablet() {
+        .container {
+            padding: unset !important;
+            margin: unset !important;
+            max-width: unset;
+        }
+
+        .mobile-container {
+            width: 100%;
+            padding: 0 10px 0 10px;
+        }
+
+        ul {
+            border-top: 1px solid lightgrey;
         }
     }
 
     .navbar {
 
+        .navbar-toggler {
+            border-color: #737373 !important;
+        }
+
+        .navbar-brand {
+            margin-right: 40px;
+            color: $primary-text-color!important;
+    
+            @include tablet() {
+                font-size: 18px !important;
+            }
+        }
+
         .btn {
             margin: unset;
-            font-size: 1rem!important;
+            font-size: 1rem !important;
         }
 
         .nav-link {
             font-size: 1rem;
-            padding-right: .8rem!important;
-            padding-left: .8rem!important;
+            padding-right: .8rem !important;
+            padding-left: .8rem !important;
 
             @include tablet() {
+                padding: 1.5rem 1.25rem;
+                font-size: 18px;
+                color: black !important;
+                border-bottom: 1px solid #6c757d;
+            }
+        }
 
-                font-size: 1.1rem;
-                &::before {
-                    font-family: 'bootstrap-icons';
-                    content: '\F27B';
-                    font-size: 12px;
+        .navbar-collapse {
+            @include tablet() {
+                ul {
+                    height: 100vh;
                 }
             }
         }

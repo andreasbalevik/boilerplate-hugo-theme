@@ -4,10 +4,12 @@
 {{ $image_tablet := $image.Fill "768x450 q100" }}
 {{ $image_mobile := $image.Fill "350x250 q100" }}
 
-<div class="container">
-    <picture>
-        <source media="(min-width:992px)" srcSet="{{$image_large.RelPermalink}}">
-        <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
-        <img src="{{$image_mobile.RelPermalink}}">
-    </picture>
+<div class="component">
+    <div class="container">
+        <picture>
+            <source media="(min-width:992px)" srcSet="{{$image_large.RelPermalink}}">
+            <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
+            <img src="{{$image_mobile.RelPermalink}}">
+        </picture>
+    </div>
 </div>
