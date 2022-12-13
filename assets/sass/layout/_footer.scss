@@ -6,12 +6,6 @@
         color: white;
     }
 
-    .row {
-        padding-top: $size-xl;
-        padding-bottom: $size-xl;
-        margin-top:unset;
-        margin-bottom: unset;
-    }
     .footer__heading {
         @extend .navbar-brand;
         padding:unset;
@@ -20,7 +14,7 @@
     @include tablet(){
         .footer__item {
             text-align: left!important;
-            margin-bottom: $size-lg;
+            margin-bottom: $spacing-md;
         }
     }
 
@@ -29,7 +23,7 @@
             list-style: none;
 
             &:not(:last-of-type) {
-                margin-bottom: $size-md;
+                margin-bottom: $spacing-md;
             }
         }
     }

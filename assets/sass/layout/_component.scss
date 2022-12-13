@@ -3,21 +3,34 @@
         background-color: $component-color;
     }
 
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding: $spacing-lg 0;
 
     @include tablet() {
-        padding-top: $size-xl;
-        padding-bottom: $size-xl;
+        padding: $spacing-lg 0;
     }
 
     .row {
+        margin: $spacing-xl 0;
+
+        @include tablet() {
+            margin: $spacing-lg 0;
+        }
+
         &:last-of-type{
             margin-bottom: 0!important;
         }
 
         &:first-of-type {
             margin-top: 0!important;
+        }
+    }
+
+    .container {
+        padding:unset;
+        .row {
+            &:nth-child(n + 1){
+                margin: $spacing-lg 0;
+            }
         }
     }
 }

@@ -1,14 +1,12 @@
-<footer class="footer">
+<footer class="footer pb-5">
     <div class="container">
-        <div class="row">
+        <div class="row pt-5 pb-5">
             <div class="col-lg-4 footer__item">
                 <div class="footer__heading">
                     <a><h3>{{ .Site.Title }}</h3></a>
                 </div>
                 <div class="footer__content">
-
                     {{ range $.Site.Data.Footer.col1.links }}
-                        
                         <li class="{{.class}}">
                             {{ if .url }}
                             <a href="{{.url}}">
@@ -17,7 +15,6 @@
                             {{ else }}
                                 <span>{{.title}}</span>
                             {{ end }}
-
                     {{end}}
                 </div>
             </div>
