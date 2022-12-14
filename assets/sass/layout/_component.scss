@@ -6,14 +6,14 @@
     padding: $spacing-lg 0;
 
     @include tablet() {
-        padding: $spacing-lg 0;
+        padding: $spacing-md 0;
     }
 
     .row {
-        margin: $spacing-xl 0;
+        margin: $spacing-lg 0;
 
         @include tablet() {
-            margin: $spacing-lg 0;
+            margin: $spacing-md 0;
         }
 
         &:last-of-type{
