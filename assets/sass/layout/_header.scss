@@ -48,16 +48,26 @@ header {
         }
 
         .nav-link {
-            font-size: 1rem;
-            padding-right: .8rem !important;
-            padding-left: .8rem !important;
+            font-size: 1.05rem;
+            padding-right: .6rem !important;
+            padding-left: .6rem !important;
+            color: black!important;
+
+     
+            &:hover {
+                color: #0d1dc2!important;
+            }
 
             @include tablet() {
                 padding: 1.5rem 1.25rem;
                 font-size: 18px;
-                color: black !important;
+
                 border-bottom: 1px solid #6c757d;
             }
+        }
+
+        .active {
+            color: #0d1dc2!important; 
         }
 
         .navbar-collapse {
@@ -66,6 +76,16 @@ header {
                     height: 100vh;
                 }
             }
+        }
+    }
+
+
+    .btn-outline-secondary {
+        color:black;
+        border-color: black;
+
+        &:hover {
+            background-color: black;
         }
     }
 }
