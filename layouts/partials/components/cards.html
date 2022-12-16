@@ -1,0 +1,21 @@
+{{ $json := .json }}
+
+<div class="mt-4 mb-4 mt-lg-5 mb-lg-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 g-lg-5">
+
+            {{ range $json }}
+            <div class="col">
+                <div class="card">
+                    {{ partial "components/image_fixed.html" (dict "context" . "image_input" .image) }}
+                    <div class="card-body">
+                      <h5 class="card-title">{{.title}}</h5>
+                      <p class="card-text">{{.text}}</p>
+                    </div>
+                  </div>
+            </div>
+            {{ end }}
+
+        </div>
+    </div>
+</div>
