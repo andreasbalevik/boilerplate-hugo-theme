@@ -1,6 +1,10 @@
 {{ $image := resources.GetMatch .image_input }}
-{{ $image_large := $image.Fill "950x550 q85" }}
+{{ $image_large := $image.Fill "950x600 q90" }}
 {{ $image_tablet := $image.Fill "650x420 q90" }}
-{{ $image_mobile := $image.Fill "400x280 q100" }}
-<img width="{{ $image_large.Width }}" height="{{ $image_large.Height }}"
-srcSet="{{$image_mobile.RelPermalink}} 400w, {{$image_tablet.RelPermalink}} 650w, {{$image_large.RelPermalink}} 950w ">
+{{ $image_mobile := $image.Fill "400x300 q90" }}
+
+<picture>
+    <source media="(min-width:992px)" srcSet="{{$image_large.RelPermalink}}">
+    <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
+    <img src="{{$image_mobile.RelPermalink}}">
+</picture>
