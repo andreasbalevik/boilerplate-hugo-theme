@@ -6,6 +6,10 @@
         color: white;
     }
 
+    .bi::before {
+        margin-right: $spacing / 2;
+    }
+
     .footer__heading {
         @extend .navbar-brand;
         padding:unset;
