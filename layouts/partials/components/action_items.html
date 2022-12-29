@@ -1,9 +1,13 @@
+{{ with .Site.Params.email }}
 <div class="me-3">
     <a class="btn btn-outline-secondary" href="mailto:{{.Site.Params.email}}">
         {{ i18n "contact-us" }}
     </a>
 </div>
+{{ end }}
 
+
+{{ with .Translations }}
 <div class="dropdown">
     <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button"
         id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -18,3 +22,4 @@
         {{end}}
     </ul>
 </div>
+{{ end }}

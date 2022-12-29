@@ -4,7 +4,12 @@
 
             <div class="mobile-container d-flex justify-content-between">
                 <a class="navbar-brand" href="{{ .Site.Home.Permalink }}">
-                    {{ .Site.Title }}
+
+                    {{ if .Site.Params.logo }}
+                        <img alt="logo" src="/{{.Site.Params.logo}}"/>
+                    {{ else }}
+                        {{ .Site.Title }}
+                    {{ end }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +21,8 @@
                 {{ $section := .Site.GetPage $currentPage.Section }}
 
                 <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
-                    {{ range sort .Site.Menus.main.ByWeight }}
+                    
+                    {{ range .Site.Menus.main.Sort }}
                     <li class="nav-item">
                         <a class="nav-link {{if $section.IsMenuCurrent "main" . }}active{{end}}" aria-current="page"
                             href="{{ .URL }}">
@@ -29,6 +35,7 @@
                         {{ partial "components/action_items.html" . }}
                     </li>
                 </ul>
+   
 
                 <div class="d-flex mt-4 mt-lg-0">
                     {{ partial "components/action_items.html" . }}
