@@ -10,6 +10,10 @@ p, a, li, span, label {
   font-weight: 400;
 }
 
+p a {
+  font-size: inherit;
+}
+
 h1+p, h1+p+a {
   font-size: 23px!important;
 
