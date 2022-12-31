@@ -1,6 +1,8 @@
-{{ $image := resources.GetMatch .image_input }}
-{{ $image_large := $image.Fill "950x550 q85" }}
+{{ range .image }}
+{{ $image := resources.GetMatch .src }}
+{{ $image_large := $image.Fill "950x550 q90" }}
 {{ $image_tablet := $image.Fill "650x420 q90" }}
-{{ $image_mobile := $image.Fill "400x280 q100" }}
-<img width="{{ $image_large.Width }}" height="{{ $image_large.Height }}"
+{{ $image_mobile := $image.Fill "400x300 q90" }}
+<img width="{{ $image_large.Width }}" alt="{{.alt}}" fetchpriority="auto" height="{{ $image_large.Height }}"
 srcSet="{{$image_mobile.RelPermalink}} 400w, {{$image_tablet.RelPermalink}} 650w, {{$image_large.RelPermalink}} 950w ">
+{{ end }}

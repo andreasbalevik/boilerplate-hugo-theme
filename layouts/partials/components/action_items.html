@@ -1,9 +1,10 @@
 {{ with .Site.Params.email }}
 <div class="me-3">
-    <a class="btn btn-outline-secondary" href="mailto:{{.Site.Params.email}}">
+    <a class="btn btn-outline-secondary bi bi-envelope" href="mailto:{{.}}">
         {{ i18n "contact-us" }}
     </a>
 </div>
+
 {{ end }}
 
 
@@ -15,7 +16,7 @@
     </a>
 
     <ul class="language dropdown-menu" aria-labelledby="dropdownMenuLink">
-        {{ range .Translations }}
+        {{ range . }}
         <li class="language__item dropdown-item">
             <a href="{{.Permalink}}" class="{{.Language}}">{{.Language.LanguageName | upper}}</a>
         </li>
