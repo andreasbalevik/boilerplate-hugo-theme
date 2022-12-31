@@ -7,7 +7,15 @@
 
 <meta name="apple-mobile-web-app-title" content="{{ .Title }}">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="description" content="{{ .Params.description }}" />
+
+{{ if .Params.description }}
+  <meta name="description" content="{{ .Params.description }}" />
+  <meta name="og:description" content="{{ .Params.description }}" />
+{{ else }}
+  <meta name="description" content="{{ substr (.Content | plainify) 0 120 }}" />
+  <meta name="og:description" content="{{ substr (.Content | plainify) 0 120 }}" />
+{{ end }}
+
 <meta name="keywords" content="{{ with .Site.Params.keywords }}{{ delimit . ", "}}{{ end }}, {{ with .Params.keywords }}{{ delimit . ", "}}{{ end }}" />
 
 {{ with .Params.image }} 
@@ -20,7 +28,7 @@
 
 <meta http-equiv="content-language" content="{{ .Site.Language }}">
 <meta property="og:title" content="{{ .Title }}" />
-<meta name="og:description" content="{{ .Params.description }}" />
+
 <meta property="og:type" content="website" /> 
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:locale" content="{{ .Site.Language }}">

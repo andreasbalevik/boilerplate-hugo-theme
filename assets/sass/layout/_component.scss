@@ -13,8 +13,8 @@ $spacing-tablet: $spacing-sm;
     }
 
     .row {
-        margin-top: $spacing-default;
-        margin-bottom: $spacing-default;
+        margin-top: $spacing-tablet;
+        margin-bottom: $spacing-tablet;
 
         @include tablet() {
             margin-top: $spacing-tablet;

@@ -7,9 +7,12 @@
     height: 66px;
     width: 66px;
     line-height: 66px;
-    border-radius: 50%;
     text-align: center;
     background-color: white;
+
+    &:hover {
+        height: 69px;
+    }
 
     font-weight: 400;
     
