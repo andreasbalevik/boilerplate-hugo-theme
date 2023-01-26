@@ -25,11 +25,12 @@
             {{ $image := resources.GetMatch .src }}
             {{ $image_tablet := $image.Fill "650x420 q90" }}
             {{ $image_mobile := $image.Fill "400x280 q100" }}
-            {{ $image_large := $image.Fill "650x420 q90" }}
 
         <div class="carousel-item {{ if eq $counter 0}}active{{end}}" style="background-color: #f0f1f5;">
-            <img style="width: auto;" width="{{ $image_large.Width }}" height="{{ $image_large.Height }}"
-                src="{{$image_large.RelPermalink}}" />
+            <picture>
+                <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
+                <img alt="{{.image.alt}}" src="{{$image_mobile.RelPermalink}}">
+            </picture>
         </div>
         {{ $counter = add $counter 1 }}
 
