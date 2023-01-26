@@ -8,3 +8,5 @@
   translation: "Hjem"
 - id: language
   translation: "Språk"
+- id: navigation
+  translation: "Navigasjon"
