@@ -8,3 +8,5 @@
   translation: "Home"
 - id: language
   translation: "Language"
+- id: navigation
+  translation: "Navigation"
