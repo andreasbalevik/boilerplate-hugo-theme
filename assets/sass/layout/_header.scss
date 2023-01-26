@@ -78,7 +78,7 @@ header {
 
         .navbar-collapse {
             @include tablet() {
-                ul {
+                .navbar-nav {
                     height: 100vh;
                 }
             }
