@@ -1,12 +1,20 @@
 .carousel-inner {
     background: transparent;
+    height: 100%;
 
-    img {
-        display: block;
-        margin: auto;
-        opacity: 0.95;
-        object-fit: cover !important;
+    .carousel-item {
+        height: 100%;
+
+        img {
+            display: block;
+            margin: auto;
+            opacity: 0.95;
+            object-fit: cover !important;
+            height: 100%;
+        }
     }
+
+
 }
 
 .carousel-control-prev,
@@ -16,6 +24,6 @@
     color: #fff;
     text-decoration: none;
     outline: 0;
-    filter: brightness(10%);
+    filter: brightness(90%);
     opacity: 1 !important;
 }

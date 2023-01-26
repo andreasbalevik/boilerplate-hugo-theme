@@ -28,7 +28,7 @@
             {{ $image_large := $image.Fill "650x420 q90" }}
 
         <div class="carousel-item {{ if eq $counter 0}}active{{end}}" style="background-color: #f0f1f5;">
-            <img style="height:300px; width: auto;" width="{{ $image.Width }}" height="{{ $image.Height }}"
+            <img style="width: auto;" width="{{ $image_large.Width }}" height="{{ $image_large.Height }}"
                 src="{{$image_large.RelPermalink}}" />
         </div>
         {{ $counter = add $counter 1 }}
