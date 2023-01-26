@@ -7,15 +7,21 @@
     <!-- The slideshow/carousel -->
     <div class="carousel-inner">
         {{ range .images }}
-        {{ $image := resources.GetMatch . }}
-        {{ $image_large := $image.Resize "300x q70" }}
-        {{ $colors := $image.Colors }}
+            {{ $image := resources.GetMatch .src }}
+            {{ $image_tablet := $image.Fill "650x420 q90" }}
+            {{ $image_mobile := $image.Fill "400x280 q100" }}
 
-        <div class="carousel-item {{ if eq $counter 0}}active{{end}}" style="background-color: {{index $colors 1}};">
-            <img style="height:300px; width: auto;" width="{{ $image.Width }}" height="{{ $image.Height }}"
-                src="{{$image_large.RelPermalink}}" />
-        </div>
-        {{ $counter = add $counter 1 }}
+
+            {{ $image_large := $image.Fill "650x420 q90" }}
+            {{ $colors := $image.Colors }}
+
+            <div class="carousel-item {{ if eq $counter 0}}active{{end}}" style="background-color: {{index $colors 1}};">
+                <picture>
+                    <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
+                    <img alt="{{.image.alt}}" src="{{$image_mobile.RelPermalink}}">
+                </picture>
+            </div>
+            {{ $counter = add $counter 1 }}
         {{ end }}
     </div>
 
