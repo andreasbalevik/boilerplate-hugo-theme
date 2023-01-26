@@ -1,17 +1,21 @@
 .carousel-inner {
-    background:transparent;
+    background: transparent;
 
     img {
         display: block;
-        margin:auto;
-        opacity:0.95;
-        object-fit:cover!important;
+        margin: auto;
+        opacity: 0.95;
+        object-fit: cover !important;
     }
 }
 
-.carousel-control-prev, .carousel-control-prev, .carousel-control-next, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-control-next {
     color: #fff;
     text-decoration: none;
     outline: 0;
-    opacity: .9;
-  }
+    filter: brightness(10%);
+    opacity: 1 !important;
+}

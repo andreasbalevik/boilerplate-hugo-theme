@@ -1,3 +1,18 @@
+{{/* 
+    
+    Usage: 
+
+    {{ partial "components/carousel.html" (dict "ctx" . "images" .images ) }}
+
+    Object:
+
+    images:
+        - image.jpg
+        - image.jpg
+      
+*/}}
+
+
 <!-- Carousel -->
 {{ $entry := delimit (shuffle (seq 1 9)) "" }}
 {{ $counter := 0 }}
@@ -11,7 +26,7 @@
         {{ $image_large := $image.Resize "300x q70" }}
         {{ $colors := $image.Colors }}
 
-        <div class="carousel-item {{ if eq $counter 0}}active{{end}}" style="background-color: {{index $colors 1}};">
+        <div class="carousel-item {{ if eq $counter 0}}active{{end}}" style="background-color: #f0f1f5;">
             <img style="height:300px; width: auto;" width="{{ $image.Width }}" height="{{ $image.Height }}"
                 src="{{$image_large.RelPermalink}}" />
         </div>
