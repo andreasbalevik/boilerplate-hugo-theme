@@ -23,8 +23,8 @@
     <div class="carousel-inner">
         {{ range .images }}
             {{ $image := resources.GetMatch .src }}
-            {{ $image_tablet := $image.Fill "650x420 q90" }}
-            {{ $image_mobile := $image.Fill "400x280 q100" }}
+            {{ $image_tablet := $image.Resize "650x q90" }}
+            {{ $image_mobile := $image.Resize "400x q100" }}
 
         <div class="carousel-item {{ if eq $counter 0}}active{{end}}" style="background-color: #f0f1f5;">
             <picture>
