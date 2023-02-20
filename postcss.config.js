@@ -1,7 +1,7 @@
 const purgecss = require('@fullhuman/postcss-purgecss')({
     map: false,
     content: ['./**/*.html'],
-    safelist: ['carousel-item-next', 'carousel-item-end', 'carousel-item-prev']
+    safelist: ['carousel-item-next', 'carousel-item-end', 'carousel-item-prev', 'carousel-item-start']
 });
 
 module.exports = {

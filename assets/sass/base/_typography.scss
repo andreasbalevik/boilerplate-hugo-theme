@@ -27,6 +27,8 @@ body {
   font-family: 'Inter', sans-serif;
   color: #1c2f46;
   line-height: 1.66;
+  text-shadow:0 0 1px transparent;
+  text-rendering: optimizeSpeed;
 }
 
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
