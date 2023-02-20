@@ -4,11 +4,10 @@
 
             <div class="mobile-container d-flex justify-content-between">
                 <a class="navbar-brand" href="{{ .Site.Home.Permalink }}">
-
                     {{ if .Site.Params.logo }}
-                        <img alt="logo" src="/{{.Site.Params.logo}}"/>
+                    <img alt="logo" src="/{{.Site.Params.logo}}" />
                     {{ else }}
-                        {{ .Site.Title }}
+                    {{ .Site.Title }}
                     {{ end }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -21,7 +20,6 @@
                 {{ $section := .Site.GetPage $currentPage.Section }}
 
                 <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
-                    
                     {{ range .Site.Menus.main.Sort }}
                     <li class="nav-item">
                         <a class="nav-link {{if $section.IsMenuCurrent "main" . }}active{{end}}" aria-current="page"
@@ -35,9 +33,8 @@
                         {{ partial "layout/action_items.html" . }}
                     </li>
                 </ul>
-   
 
-                <div class="d-flex mt-4 mt-lg-0">
+                <div class="d-flex gap-2 mt-4 mt-lg-0">
                     {{ partial "layout/action_items.html" . }}
                 </div>
             </div>

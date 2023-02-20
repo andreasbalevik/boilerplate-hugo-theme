@@ -1,12 +1,10 @@
 {{ with .Site.Params.email }}
-<div class="me-3">
+<div>
     <a class="btn btn-outline-secondary bi bi-envelope" href="mailto:{{.}}">
         {{ i18n "contact-us" }}
     </a>
 </div>
-
 {{ end }}
-
 
 {{ with .Translations }}
 <div class="dropdown">

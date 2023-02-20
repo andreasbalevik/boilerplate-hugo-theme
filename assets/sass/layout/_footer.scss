@@ -1,35 +1,64 @@
-.footer {    
+.footer {
     background-color: $footer-color;
     color: white;
 
     a {
         color: white;
+        font-size: 1.1rem!important;
+        text-decoration: unset;
     }
 
     .bi::before {
         margin-right: $spacing / 2;
     }
 
-    .footer__heading {
-        @extend .navbar-brand;
-        padding:unset;
-    }
-
-    @include tablet(){
-        .footer__item {
-            text-align: left!important;
-            margin-bottom: $spacing-md;
+    .footer__brand {
+        .footer__heading {
+            @extend .navbar-brand;
+            padding: unset;
         }
-    }
 
-    .footer__content {
-        li {
-            list-style: none;
+        .footer__content {
+            li {
+                list-style: none;
 
-            &:not(:last-of-type) {
-                margin-bottom: $spacing;
+                &:not(:last-of-type) {
+                    margin-bottom: $spacing;
+                }
+
+
             }
         }
     }
-   
+
+    .footer__nav {
+        @include tablet() {
+            text-align: left !important;
+            margin: $spacing-md 0;
+
+            .nav-link {
+                padding-left: unset !important;
+            }
+        }
+
+        .nav-link {
+            &:hover {
+                color: white !important;
+                text-decoration: underline;
+            }
+
+            &:first-of-type {
+                padding-top:unset!important;
+            }
+        }
+    }
+
+    .footer__webmaster {
+        @include tablet() {
+            text-align: left!important;
+        }
+    }
+
+
+
 }
