@@ -2,22 +2,12 @@
     padding-left:$spacing-sm;
     padding-right:$spacing-sm;
     border-radius: 24px!important;
-    
+    border-color:black;
+
     &:hover {
-        border-color:black;
+        background-color: #edebeb;
     }
 
     margin-top:.5rem;
     font-size: 18px;
-
-    border-radius: 0;
-}
-
-.btn-outline-secondary {    
-    color:black;
-    border-color: black;
-
-    &:hover {
-        background-color: black;
-    }
 }
