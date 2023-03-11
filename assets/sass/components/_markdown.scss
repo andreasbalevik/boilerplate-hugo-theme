@@ -10,6 +10,10 @@
 
     h1:first-child {
         margin-top:unset;
+
+        @include tablet(){
+            margin-top:$spacing!important;
+        }
     }
     
     h1,h2,h3,h4,h5 {

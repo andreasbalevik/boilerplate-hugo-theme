@@ -6,8 +6,12 @@ html {
   font-size: 16px;
 }
 p, a, li, span, label {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 400;
+}
+
+p:last-child {
+  margin-bottom:unset;
 }
 
 p a {
@@ -15,10 +19,10 @@ p a {
 }
 
 h1+p, h1+p+a {
-  font-size: 23px!important;
+  font-size: 1.5rem;
 
   @include tablet(){
-    font-size: 20px!important;
+    font-size: calc(1.265rem + .3vw);
   }
 }
 
@@ -34,8 +38,12 @@ body {
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
   font-family: 'Poppins', sans-serif;
   margin-bottom: $spacing;
+
+  @include tablet(){
+    margin-top: $spacing;
+  }
 }
 
 h1,.h1 {
-  margin-bottom: $spacing-sm;
+  margin-bottom: $spacing;
 }

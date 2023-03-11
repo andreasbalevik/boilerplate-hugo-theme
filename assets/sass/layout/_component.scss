@@ -12,22 +12,7 @@ $spacing-tablet: $spacing-sm;
         padding: $spacing-tablet 0;
     }
 
-    .row {
-        margin-top: $spacing-tablet;
-        margin-bottom: $spacing-tablet;
-
-        @include tablet() {
-            margin-top: $spacing-tablet;
-            margin-bottom: $spacing-tablet;
-        }
-
-        &:first-of-type {
-            margin-top: 0!important;
-        }
-
-        &:last-of-type{
-            margin-bottom: 0!important;
-        }
+    @include mobile() {
+        padding: $spacing 0;
     }
-
 }

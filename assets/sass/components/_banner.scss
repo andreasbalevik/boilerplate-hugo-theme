@@ -1,9 +1,9 @@
 .banner {
     background-color: $banner-color;
-    padding: $spacing-lg 0;
+    padding: $spacing-md 0;
 
     @include tablet(){
-        padding: $spacing-md 0;
+        padding: $spacing-sm 0;
     }
 
     h1 {
