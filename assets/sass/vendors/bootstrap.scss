@@ -1,1 +1,7 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.card {
+    img {
+        max-height: 270px;
+    }
+}

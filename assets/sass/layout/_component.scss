@@ -6,13 +6,9 @@ $spacing-tablet: $spacing-sm;
         background-color: $component-color;
     }
 
-    padding: $spacing-default 0;
+    padding: 48px 0;
 
     @include tablet() {
-        padding: $spacing-tablet 0;
-    }
-
-    @include mobile() {
-        padding: $spacing 0;
+        padding: 25px 0;
     }
 }

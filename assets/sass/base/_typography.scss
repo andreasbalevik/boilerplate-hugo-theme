@@ -5,23 +5,35 @@
 html {
   font-size: 16px;
 }
-p, a, li, span, label {
+
+a,
+a:hover {
+  text-decoration: unset;
+  color: inherit;
+}
+
+p,
+a,
+li,
+span,
+label {
   font-size: 18px;
   font-weight: 400;
 }
 
 p:last-child {
-  margin-bottom:unset;
+  margin-bottom: unset;
 }
 
 p a {
   font-size: inherit;
 }
 
-h1+p, h1+p+a {
+h1+p,
+h1+p+a {
   font-size: 1.5rem;
 
-  @include tablet(){
+  @include tablet() {
     font-size: calc(1.265rem + .3vw);
   }
 }
@@ -31,19 +43,72 @@ body {
   font-family: 'Inter', sans-serif;
   color: #1c2f46;
   line-height: 1.66;
-  text-shadow:0 0 1px transparent;
+  text-shadow: 0 0 1px transparent;
   text-rendering: optimizeSpeed;
 }
 
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-family: 'Poppins', sans-serif;
   margin-bottom: $spacing;
 
-  @include tablet(){
+  font-weight: 600;
+
+  @include tablet() {
     margin-top: $spacing;
   }
 }
 
-h1,.h1 {
+h1,
+.h1 {
   margin-bottom: $spacing;
+}
+
+@include desktop() {
+
+  h1,
+  .h1 {
+    font-size: 2.75em;
+    line-height: 1.25;
+  }
+
+  h2,
+  .h2 {
+    font-size: 2.25em;
+    line-height: 1.25;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.75em;
+    line-height: 1.25;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1.25em;
+    line-height: 1.25;
+  }
+
+  h6,
+  .h6 {
+    font-size: 0.875em;
+    line-height: 1.25;
+  }
 }

@@ -1,0 +1,16 @@
+<a href="{{.href}}">
+    <div class="column">
+        {{ if .image }}
+            {{ partial "components/image.html" . }}
+        {{ end }}
+
+        <div class="column__content text-left ">
+            <h3 class>{{.title}}</h3>
+            <p>{{.text}}</p>
+
+            <div class="mt-2 text-center">
+                <span class="bi bi-arrow-right-short h1"></span>
+            </div>
+        </div>
+    </div>
+</a>
