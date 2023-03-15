@@ -11,19 +11,28 @@
     background-color: white;
     border-radius: 8px;
 
-    &:hover {
-        height: 70px;
-    }
+
 
     font-weight: 400;
     
-    transition: 0.4s all;
+    @include desktop(){
+        transition: 0.4s all;
+
+        &:hover {
+            height: 70px;
+        }
+    }
+
     border: 2px solid $primary-text-color;
 
     span {
         display: block;
         color: $primary-text-color;
-        transition: 0.4s all;
+
+        @include desktop(){
+            transition: 0.4s all;
+        }
+
         font-size: 1.1rem;
     }
 }
