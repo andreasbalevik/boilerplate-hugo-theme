@@ -31,10 +31,10 @@ p a {
 
 h1+p,
 h1+p+a {
-  font-size: 1.5rem;
+  font-size: 1.4rem!important;
 
   @include tablet() {
-    font-size: calc(1.265rem + .3vw);
+    font-size: calc(1.1rem + .3vw)!important;
   }
 }
 
