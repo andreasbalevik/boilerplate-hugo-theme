@@ -1,3 +1,13 @@
+{{/*
+    Usage: 
+    {{ partial "components/image.html" (dict "ctx" . "image" .Params.image_1) }}
+
+    Data:
+      image_1: 
+        src: "images/sample-4.jpg"
+        alt: ""
+*/}}
+
 {{ $image := resources.GetMatch .image.src }}
 {{ $image_tablet := $image.Fill "650x400 q90" }}
 {{ $image_mobile := $image.Fill "400x275 q100" }}

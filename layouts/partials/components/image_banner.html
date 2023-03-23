@@ -1,3 +1,13 @@
+{{/*
+    Usage: 
+    {{ partial "components/image_banner.html" (dict "ctx" . "image" .Params.image_1) }}
+
+    Data:
+      image_1: 
+        src: "images/sample-4.jpg"
+        alt: ""
+*/}}
+
 {{ $image := resources.GetMatch .image.src }}
 {{ $image_large := $image.Fill "1300x580 q100" }}
 {{ $image_tablet := $image.Fill "650x425 q100" }}
