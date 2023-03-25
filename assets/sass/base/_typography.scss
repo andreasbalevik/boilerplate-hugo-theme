@@ -6,6 +6,11 @@ html {
   font-size: 16px;
 }
 
+h1,
+.h1 {
+  margin-bottom: $spacing-sm;
+}
+
 a,
 a:hover {
   text-decoration: unset;
@@ -29,6 +34,10 @@ p a {
   font-size: inherit;
 }
 
+p {
+  opacity: .95;
+}
+
 h1+p,
 h1+p+a {
   font-size: 1.4rem!important;
@@ -36,15 +45,6 @@ h1+p+a {
   @include tablet() {
     font-size: calc(1.1rem + .3vw)!important;
   }
-}
-
-body {
-  background: white;
-  font-family: 'Inter', sans-serif;
-  color: #1c2f46;
-  line-height: 1.66;
-  text-shadow: 0 0 1px transparent;
-  text-rendering: optimizeSpeed;
 }
 
 h1,
@@ -60,55 +60,21 @@ h6,
 .h5,
 .h6 {
   font-family: 'Poppins', sans-serif;
-  margin-bottom: $spacing;
+  margin-bottom: $spacing-sm;
 
   font-weight: 600;
 
   @include tablet() {
-    margin-top: $spacing;
+    margin-top: $spacing-sm;
   }
 }
 
-h1,
-.h1 {
-  margin-bottom: $spacing;
+body {
+  background: white;
+  font-family: 'Inter', sans-serif;
+  color: #1c2f46;
+  line-height: 1.66;
+  text-shadow: 0 0 1px transparent;
+  text-rendering: optimizeSpeed;
 }
 
-@include desktop() {
-
-  h1,
-  .h1 {
-    font-size: 2.75em;
-    line-height: 1.25;
-  }
-
-  h2,
-  .h2 {
-    font-size: 2.25em;
-    line-height: 1.25;
-  }
-
-  h3,
-  .h3 {
-    font-size: 1.75em;
-    line-height: 1.25;
-  }
-
-  h4,
-  .h4 {
-    font-size: 1.5em;
-    line-height: 1.25;
-  }
-
-  h5,
-  .h5 {
-    font-size: 1.25em;
-    line-height: 1.25;
-  }
-
-  h6,
-  .h6 {
-    font-size: 0.875em;
-    line-height: 1.25;
-  }
-}

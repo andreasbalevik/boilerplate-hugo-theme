@@ -15,4 +15,18 @@
 
     margin-top:.5rem;
     font-size: 18px;
+
+    &-outline {
+        background-color: transparent!important;
+        color: black!important;
+        border-color: #d3d3d3 !important;
+        opacity: .95!important;
+
+        &:hover {
+            border-color: #000 !important;
+            background-color: transparent!important;
+            color:black!important;
+            opacity: 1!important;
+        }
+    }
 }

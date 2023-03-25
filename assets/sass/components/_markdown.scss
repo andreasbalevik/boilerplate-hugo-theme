@@ -1,19 +1,20 @@
 .markdown {
-    img + h1,
-    picture + h1 {
-        margin-top: $spacing-default;
-
-    }
 
     h1:first-child {
         margin-top:unset;
+    }
+
+    img + h1,
+    picture + h1 {
+        margin-top: $spacing-xl;
 
         @include tablet(){
-            margin-top:$spacing!important;
+            margin-top: $spacing-lg;
         }
+
     }
-    
+
     h1,h2,h3,h4,h5 {
-        margin-top: $spacing-default;
+        margin-top: $spacing-lg;
     }
 }

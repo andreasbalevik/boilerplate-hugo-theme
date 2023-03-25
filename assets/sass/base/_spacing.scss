@@ -1,10 +1,6 @@
-$spacing: 1rem;
-$spacing-sm: $spacing * 1.5;
-$spacing-md: $spacing * 3;
-$spacing-lg: $spacing * 4.5;
-$spacing-xl: $spacing * 6;
 
-/* GLOBAL */
-$spacing-default: $spacing-md;
-$spacing-tablet: $spacing-sm;
-
+$spacing-xs: .75rem;
+$spacing-sm: 1rem; // 16px
+$spacing-md: $spacing-sm * 1.5; // 24px
+$spacing-lg: $spacing-sm * 2; // 32px
+$spacing-xl: $spacing-sm * 3; // 48px

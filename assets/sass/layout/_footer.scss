@@ -9,7 +9,7 @@
     }
 
     .bi::before {
-        margin-right: $spacing / 2;
+        margin-right: 8px;
     }
 
     .footer__brand {
@@ -23,7 +23,7 @@
                 list-style: none;
 
                 &:not(:last-of-type) {
-                    margin-bottom: $spacing;
+                    margin-bottom: $spacing-sm;
                 }
 
 

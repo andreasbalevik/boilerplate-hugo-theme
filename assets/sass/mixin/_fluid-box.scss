@@ -1,0 +1,7 @@
+.fluid-box {
+    padding: 24px;
+
+    @include tablet(){
+        padding: 24px 12px;
+    }
+}
