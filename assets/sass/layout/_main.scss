@@ -1,5 +1,9 @@
 main {
     padding-top:68.8px;
+
+    @include tablet(){
+        padding-top:64.8px;
+    }
 }
 
 .container {
