@@ -31,4 +31,15 @@
             opacity: 1!important;
         }
     }
+
+    &--white {
+        background-color: white!important;
+        color:#4e555b!important;
+        border-color:#4e555b!important;
+
+        &:hover {
+            color: black!important;
+            border-color:black!important;
+        }
+    }
 }
