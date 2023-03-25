@@ -21,12 +21,17 @@
 
         <div class="column__content text-left ">
             <h3 class>{{.title}}</h3>
-            <p>{{.text}}</p>
 
-            {{ if .link.href }}
-            <div class="mt-2 text-center">
-                <span class="bi bi-arrow-right-short h1"></span>
-            </div>
+            {{ with .text }}
+                <p>{{.}}</p>
+            {{ end }}
+
+            {{ with .link }}
+                {{ if .href }}
+                <div class="mt-2 text-center">
+                    <span class="icon bi bi-arrow-right-short"></span>
+                </div>
+                {{ end }}
             {{ end }}
         </div>
     </div>

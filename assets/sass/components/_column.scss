@@ -1,6 +1,6 @@
 .column {
     height: 100%;
-
+    background: white;
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.102);
     overflow: hidden;
@@ -23,7 +23,7 @@
     box-shadow: var(--shadow-1);
 
     &:hover {
-        border: 1px solid lightgray;
+        border: 1px solid black;
         box-shadow: var(--shadow-4);
     }
 
@@ -31,7 +31,31 @@
         @extend .fluid-box;
         @extend .h-100;
         background-color: white!important;
+
+        p {
+            font-size: 20px;
+        }
+
+        .icon {
+            @extend .h1;
+        }
     } 
+}
+
+.col-lg-4 {
+    .column {
+        h3 {
+            @extend .h5;
+            @extend .text-center;
+        }
+
+        &__content {
+
+            .icon {
+                @extend .h2;
+            }
+        }
+    }
 }
 
 

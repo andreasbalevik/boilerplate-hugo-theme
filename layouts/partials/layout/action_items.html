@@ -1,6 +1,6 @@
 {{ with .Site.Params.email }}
 <div>
-    <a class="btn bi bi-envelope" href="mailto:{{.}}">
+    <a class="btn btn-outline bi bi-envelope" href="mailto:{{.}}">
         {{ i18n "contact-us" }}
     </a>
 </div>
@@ -8,7 +8,7 @@
 
 {{ with .Translations }}
 <div class="dropdown">
-    <a class="btn dropdown-toggle bi bi-globe2" href="#" role="button"
+    <a class="btn btn-outline dropdown-toggle bi bi-globe2" href="#" role="button"
         id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
         {{ i18n "language" }}
     </a>
