@@ -22,10 +22,7 @@
 
     box-shadow: var(--shadow-1);
 
-    &:hover {
-        border: 1px solid black;
-        box-shadow: var(--shadow-4);
-    }
+
 
     &__content {
         @extend .fluid-box;
@@ -58,9 +55,6 @@
     }
 }
 
-
-
-
 .inline-column {
     .column {
         display: flex;
@@ -85,6 +79,15 @@
             }
 
             background-color: white;
+        }
+    }
+}
+
+a {
+    .column {
+        &:hover {
+            border: 1px solid black;
+            box-shadow: var(--shadow-4);
         }
     }
 }
