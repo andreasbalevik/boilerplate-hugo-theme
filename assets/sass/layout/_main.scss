@@ -1,11 +1,11 @@
 main {
-    padding-top:68.8px;
+    padding-top: 68.8px;
 
-    @include tablet(){
-        padding-top:64.8px;
+    @include tablet() {
+        padding-top: 64.8px;
     }
 }
 
 .container {
-    max-width: 1140px!important;
+    max-width: 1340px !important;
 }
