@@ -1,15 +1,19 @@
-{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
+<link rel="prefetch" href="{{ .Permalink }}"/>
 
+{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
 {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | postCSS | minify }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css?display=swap" />
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css?display=swap"/>
 
+<link rel="alternate" href="{{ .Permalink }}" hreflang="x-default">
 {{ range .AllTranslations }}
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
 {{ end }}
 
-<link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
-<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" />
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url"/>
 
-<link rel="prefetch" href="{{ .Permalink }}" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml"/>
+
+
