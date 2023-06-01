@@ -13,8 +13,8 @@
         {{ end }}
     </title>
 
-    {{ partial "layout/meta.html" . }}
-    {{ partial "layout/links.html" . }}
+    {{ partial "seo/meta.html" . }}
+    {{ partial "seo/links.html" . }}
     {{ partial "layout/head.html" . }}
 
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
@@ -30,11 +30,12 @@
         {{end}}
     </main>
 
-    {{ partial "layout/to-top-button.html" . }}
+    {{ partial "accessibillity/to-top-button.html" . }}
     {{ partial "layout/footer.html" . }}
 
 </body>
 
-{{ partial "layout/script.html" . }}
+{{ partial "seo/schema.html" . }}
+{{ partial "seo/script.html" . }}
 
 </html>
