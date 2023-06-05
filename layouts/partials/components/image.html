@@ -14,5 +14,5 @@
 
 <picture>
     <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
-    <img alt="{{.image.alt}}" src="{{$image_mobile.RelPermalink}}">
+    <img alt="{{.image.alt}}" loading="lazy" fetchpriority="high" src="{{$image_mobile.RelPermalink}}">
 </picture>

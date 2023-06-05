@@ -28,7 +28,7 @@
         <div class="carousel-item {{ if eq $counter 0}}active{{end}}"  style="background-color: #f0f1f5;">
             <picture>
                 <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
-                <img alt="{{.image.alt}}" {{ if eq $counter 0 }}fetchpriority="high"{{end}} loading="lazy" src="{{$image_mobile.RelPermalink}}">
+                <img alt="{{.image.alt}}" loading="lazy" fetchpriority="high" src="{{$image_mobile.RelPermalink}}">
             </picture>
         </div>
         {{ $counter = add $counter 1 }}
