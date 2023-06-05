@@ -2,8 +2,11 @@
 
     &__item {
 
+        padding:unset!important;
+
         a {
             margin-top: -5px;
+            padding: 15px 15px;
             text-decoration: none;
             font-size: 1.05rem;
             color:$secondary-text-color!important;
