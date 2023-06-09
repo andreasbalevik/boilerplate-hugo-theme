@@ -2,8 +2,15 @@
 <link rel="preconnect" href="https://cdn.lineicons.com"/>
 <link rel="preconnect" href="{{ .Permalink }}"/>
 
+{{ $style_layout := resources.Get "sass/inline.scss" | resources.ToCSS | postCSS | resources.Minify }}
+{{ with $style_layout }}
+    <style type="text/css">
+        {{.Content | safeCSS }}
+    </style>
+{{ end }}
+
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
-{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | postCSS | minify }}
+{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | postCSS | resources.Minify }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
 <link rel="alternate" href="{{ .Permalink }}" hreflang="x-default">
