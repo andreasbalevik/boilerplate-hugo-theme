@@ -6,7 +6,7 @@
         "url": "{{ .Site.BaseURL }}",
         "description": "{{ .Page.Params.description }}",
         "thumbnailUrl": "{{ with .Page.Params.image }} {{ . | absURL}} {{else}} {{.Site.Params.ogImage}} {{end}}",
-        "image": "{{ with .Page.Params.image }} {{ . | absURL}} {{else}} {{.Site.Params.ogImage}} {{end}}",
+        "image": "{{ with .Page.Params.ogImage }} {{ . | absURL}} {{else}} {{.Site.Params.ogImage}} {{end}}",
         "keywords": "{{ with .Site.Params.keywords }}{{ delimit . ", "}}{{ end }}, {{ with .Params.keywords }}{{ delimit . ", "}}{{ end }}",
         "headline": "{{with .Page.Title }} {{.}} {{else}}{{.Site.Title}}{{end}}"
     }

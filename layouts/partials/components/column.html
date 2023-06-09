@@ -15,8 +15,8 @@
 
 <a href="{{.link.href}}" {{ if not .link.href}} class="pe-none" {{end}}>
     <div class="column">
-        {{ if .image }}
-            {{ partial "components/image.html" . }}
+        {{ with .images }}
+            {{ partial "components/image-col-6.html" (dict "ctx" . "images" . ) }}
         {{ end }}
 
         <div class="column__content text-left ">

@@ -1,0 +1,17 @@
+{{/*
+    Usage: 
+    {{ partial "components/image.html" . }}
+
+    Data:
+      image_1: 
+        src: "images/sample-4.jpg"
+        alt: ""
+*/}}
+
+{{ $image := resources.GetMatch .src }}
+{{ $image_tablet := $image.Fill "650x460 q90" }}
+{{ $image_mobile := $image.Fill "400x310 q100" }}
+<picture>
+    <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
+    <img {{ with .alt }}alt="{{.}}"{{ end }} loading="lazy" fetchpriority="high" src="{{$image_mobile.RelPermalink}}">
+</picture>

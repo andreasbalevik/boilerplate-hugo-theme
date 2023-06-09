@@ -1,0 +1,19 @@
+{{/*
+    Usage: 
+    {{ partial "components/image_banner.html" . }}
+
+    Data:
+      image_1: 
+        src: "images/sample-4.jpg"
+        alt: ""
+*/}}
+
+{{ $image := resources.GetMatch .src }}
+{{ $image_large := $image.Fill "1300x590 q100" }}
+{{ $image_tablet := $image.Fill "650x435 q100" }}
+{{ $image_mobile := $image.Fill "400x310 q100" }}
+<picture>
+    <source media="(min-width:992px)" srcSet="{{$image_large.RelPermalink}}">
+    <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
+    <img {{ with .alt }}alt="{{.}}"{{ end }} loading="lazy" src="{{$image_mobile.RelPermalink}}">
+</picture>
