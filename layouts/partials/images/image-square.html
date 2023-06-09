@@ -9,12 +9,12 @@
 */}}
 
 {{ $image := resources.GetMatch .src }}
-{{ $image_large := $image.Fill "960x740 q90" }}
-{{ $image_medium := $image.Fill "640x527 q95" }}
-{{ $image_small := $image.Fill "480x420 q100" }}
+{{ $image_large := $image.Fill "960x740" }}
+{{ $image_medium := $image.Fill "640x527" }}
+{{ $image_small := $image.Fill "480x420" }}
 
 <picture>
     <source media="(min-width: 992px)" srcset="{{ $image_large.RelPermalink }}">
     <source media="(min-width: 768px)" srcset="{{ $image_medium.RelPermalink }}">
-    <img {{ with .alt }}alt="{{ . }}" {{ end }} src="{{ $image_small.RelPermalink }}">
+    <img {{ with .alt }}alt="{{ . }}" {{ end }} src="{{ $image_small.RelPermalink }}" width="{{ $image_small.Width }}" height="{{ $image_small.Height }}">
 </picture>
