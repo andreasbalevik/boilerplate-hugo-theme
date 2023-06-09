@@ -16,5 +16,5 @@
 <picture>
     <source media="(min-width: 992px)" srcset="{{ $image_large.RelPermalink }}">
     <source media="(min-width: 768px)" srcset="{{ $image_medium.RelPermalink }}">
-    <img {{ with .alt }}alt="{{ . }}" {{ end }} loading="lazy" src="{{ $image_small.RelPermalink }}">
+    <img {{ with .alt }}alt="{{ . }}" {{ end }} src="{{ $image_small.RelPermalink }}">
 </picture>
