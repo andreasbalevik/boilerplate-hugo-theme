@@ -10,9 +10,9 @@
 
 {{ $image := resources.GetMatch .src }}
 {{ $image_large := $image.Fill "1920x900 q30" }}
-{{ $image_medium := $image.Fill "1366x700 q30" }}
-{{ $image_small := $image.Fill "768x450 q30" }}
-{{ $image_mobile := $image.Fill "375x300 q30" }}
+{{ $image_medium := $image.Fill "1366x700 q40" }}
+{{ $image_small := $image.Fill "768x450" }}
+{{ $image_mobile := $image.Fill "375x300" }}
 
 <picture>
     <source media="(min-width: 1200px)" srcset="{{ $image_large.RelPermalink }}">
