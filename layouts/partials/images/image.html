@@ -9,7 +9,7 @@
 */}}
 
 {{ $image := resources.GetMatch .src }}
-{{ $image_small := $image.Fill "648x360" }}
+{{ $image_small := $image.Fill "648x401" }}
 
 <picture>
     <img {{ with .alt }}alt="{{ . }}" {{ end }} loading="lazy" src="{{ $image_small.RelPermalink }}" width="{{ $image_small.Width }}" height="{{ $image_small.Height }}">
