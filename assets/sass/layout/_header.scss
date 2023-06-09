@@ -49,7 +49,7 @@ header {
             color: $primary-text-color!important;
     
             @include tablet() {
-                font-size: 18px !important;
+                font-size: calc(.95rem + .1vw)!important;
             }
 
             img {
