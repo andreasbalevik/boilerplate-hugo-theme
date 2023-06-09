@@ -9,11 +9,15 @@
 */}}
 
 {{ $image := resources.GetMatch .src }}
-{{ $image_large := $image.Fill "1300x590 q100" }}
-{{ $image_tablet := $image.Fill "650x435 q100" }}
-{{ $image_mobile := $image.Fill "400x310 q100" }}
+{{ $image_large := $image.Fill "1920x900 q90" }}
+{{ $image_medium := $image.Fill "1366x700 q95" }}
+{{ $image_small := $image.Fill "768x450 q100" }}
+{{ $image_mobile := $image.Fill "375x300 q100" }}
+
+
 <picture>
-    <source media="(min-width:992px)" srcSet="{{$image_large.RelPermalink}}">
-    <source media="(min-width:768px)" srcSet="{{$image_tablet.RelPermalink}}">
-    <img {{ with .alt }}alt="{{.}}"{{ end }} loading="lazy" src="{{$image_mobile.RelPermalink}}">
+    <source media="(min-width: 1200px)" srcset="{{ $image_large.RelPermalink }}">
+    <source media="(min-width: 992px)" srcset="{{ $image_medium.RelPermalink }}">
+    <source media="(min-width: 576px)" srcset="{{ $image_small.RelPermalink }}">
+    <img {{ with .alt }}alt="{{ . }}"{{ end }} loading="lazy" src="{{ $image_mobile.RelPermalink }}">
 </picture>

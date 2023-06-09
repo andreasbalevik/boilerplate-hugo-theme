@@ -1,6 +1,6 @@
 {{/*
     Usage:
-    {{ partial "components/image.html" . }}
+    {{ partial "components/image-square.html" . }}
 
     Data:
     image_1:
@@ -9,9 +9,9 @@
 */}}
 
 {{ $image := resources.GetMatch .src }}
-{{ $image_large := $image.Fill "1280x720 q90" }}
-{{ $image_medium := $image.Fill "854x480 q95" }}
-{{ $image_small := $image.Fill "640x360 q100" }}
+{{ $image_large := $image.Fill "960x740 q90" }}
+{{ $image_medium := $image.Fill "640x527 q95" }}
+{{ $image_small := $image.Fill "480x420 q100" }}
 
 <picture>
     <source media="(min-width: 992px)" srcset="{{ $image_large.RelPermalink }}">

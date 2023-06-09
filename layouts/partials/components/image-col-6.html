@@ -20,7 +20,7 @@
             {{ $counter := 0 }}
             {{ range .images }}
             <div class="carousel-item {{ if eq $counter 0}}active{{end}}" style="background-color: #f0f1f5;">
-                {{ partial "images/image.html" . }}
+                {{ partial "images/image-square.html" . }}
             </div>
             {{ $counter = add $counter 1 }}
             {{ end }}
