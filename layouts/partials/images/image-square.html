@@ -11,7 +11,7 @@
 {{ $image := resources.GetMatch .src }}
 {{ $image_small := $image.Fill "650x501" }}
 
-<div style="overflow:hidden; max-height: {{$image_small.Height}}px;width: auto; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(data:{{ $image.MediaType }};base64,{{ ($image.Resize "50x").Content | base64Encode }})">
+<div style="overflow:hidden; max-height: {{$image_small.Height}}px;width: auto; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(data:{{ $image.MediaType }};base64,{{ ($image.Resize "150x").Content | base64Encode }})">
     <picture>
         <img {{ with .alt }}alt="{{ . }}" {{ end }} loading="lazy" src="{{ $image_small.RelPermalink }}" width="{{ $image_small.Width }}" height="{{ $image_small.Height }}">
     </picture>
