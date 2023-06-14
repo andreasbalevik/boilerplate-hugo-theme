@@ -1,13 +1,11 @@
-<link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
-<link rel="preconnect" href="https://cdn.lineicons.com"/>
-<link rel="preconnect" href="{{ .Permalink }}"/>
-
 {{ $style_layout := resources.Get "sass/inline.scss" | resources.ToCSS | postCSS | resources.Minify }}
 {{ with $style_layout }}
-    <style type="text/css">
+    <style fetchpriority="high" type="text/css">
         {{.Content | safeCSS }}
     </style>
 {{ end }}
+
+<link rel="preload" href="{{ .Permalink }}"/>
 
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
 {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | postCSS | resources.Minify }}
@@ -19,12 +17,9 @@
 {{ end }}
 
 <link rel="canonical" href="{{ .Permalink }}" itemprop="url"/>
-
 <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml"/>
 
 <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-
-<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css" />

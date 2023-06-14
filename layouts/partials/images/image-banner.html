@@ -9,13 +9,12 @@
 */}}
 
 {{ $image := resources.GetMatch .src }}
-{{ $image_medium := $image.Fill "1366x625 q40" }}
-{{ $image_small := $image.Fill "768x425" }}
-{{ $image_mobile := $image.Fill "375x325" }}
-{{ $placeholder := $image.Fill "375x325 q10" }}
+{{ $image_medium := $image.Fill "1313x578 q30" }}
+{{ $image_small := $image.Fill "784x578" }}
 
-<picture>
-    <source media="(min-width: 992px)" srcset="{{ $image_medium.RelPermalink }}">
-    <source media="(min-width: 576px)" srcset="{{ $image_small.RelPermalink }}">
-    <img {{ with .alt }}alt="{{ . }}"{{ end }} src="{{ $image_mobile.RelPermalink }}" width="{{ $image_small.Width }}" height="{{ $image_small.Height }}">
-</picture>
+<div style="max-height: {{$image_medium.Height}}px;width: auto; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(data:{{ $image.MediaType }};base64,{{ ($image.Resize "50x").Content | base64Encode }})">
+    <picture>
+        <source media="(min-width: 992px)" srcset="{{ $image_medium.RelPermalink }}" width="{{ $image_medium.Width }}" height="{{ $image_medium.Height }}">
+        <img {{ with .alt }}alt="{{ . }}"{{ end }} loading="lazy" src="{{ $image_small.RelPermalink }}" width="{{ $image_small.Width }}" height="{{ $image_small.Height }}">
+    </picture>
+</div>
