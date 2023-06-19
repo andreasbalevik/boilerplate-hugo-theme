@@ -1,0 +1,27 @@
+.image-col-6 {
+
+    @include tablet() {
+        
+        .carousel-control-prev, .carousel-control-next {
+            filter: brightness(50%)!important;
+        }
+        .image-square {
+            background-color: #f4f6f9!important;
+            background-image: unset!important;
+            img {
+                width: unset !important;
+            }
+        }
+    }
+
+    @include mobile() {
+        .carousel-control-prev, .carousel-control-next {
+            filter: brightness(90%)!important;
+        }
+        .image-square {
+            img {
+                width: 100% !important;
+            }
+        }
+    }
+}

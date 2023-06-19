@@ -9,3 +9,9 @@ main {
 .container {
     max-width: $breakpoint-x-large !important;
 }
+
+.placeholder__image {
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

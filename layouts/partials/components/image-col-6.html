@@ -8,6 +8,7 @@
     - image.jpg
 */}}
 
+<div class="image-col-6">
 {{ $size := len .images }}
 {{ if eq $size 1 }}
     {{ with index .images 0 }}
@@ -43,3 +44,4 @@
         {{ end }}
     </div>
 {{ end }}
+</div>

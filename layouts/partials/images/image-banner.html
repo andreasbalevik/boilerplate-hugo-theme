@@ -10,11 +10,9 @@
 
 {{ $image := resources.GetMatch .src }}
 {{ $image_medium := $image.Fill "1313x578 q30" }}
-{{ $image_small := $image.Fill "784x578" }}
-
-<div style="max-height: {{$image_medium.Height}}px;width: auto; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(data:{{ $image.MediaType }};base64,{{ ($image.Resize "250x").Content | base64Encode }})">
+{{ $placeholder := $image.Fill "1313x578 q8" }}
+<div class="image-banner" style="max-height: {{$image_medium.Height}}px;width: auto; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(data:{{ $image.MediaType }};base64,{{ $placeholder.Content | base64Encode }})">
     <picture>
-        <source media="(min-width: 992px)" srcset="{{ $image_medium.RelPermalink }}" width="{{ $image_medium.Width }}" height="{{ $image_medium.Height }}">
-        <img {{ with .alt }}alt="{{ . }}"{{ end }} loading="lazy" src="{{ $image_small.RelPermalink }}" width="{{ $image_small.Width }}" height="{{ $image_small.Height }}">
+        <img style="opacity: 1" {{ with .alt }}alt="{{ . }}"{{ end }} loading="lazy" src="{{ $image_medium.RelPermalink }}" width="{{ $image_medium.Width }}" height="{{ $image_medium.Height }}">
     </picture>
 </div>
