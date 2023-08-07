@@ -17,10 +17,6 @@
     
     @include desktop(){
         transition: 0.4s all;
-
-        &:hover {
-            height: 70px;
-        }
     }
 
     border: 2px solid $primary-text-color;
@@ -28,11 +24,8 @@
     span {
         display: block;
         color: $primary-text-color;
-
-        @include desktop(){
-            transition: 0.4s all;
-        }
-
-        font-size: 1.1rem;
+        font-weight: 600!important;
+        font-size: 2rem!important;
+        margin-top:-3px;
     }
 }

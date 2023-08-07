@@ -24,7 +24,6 @@
 
     &__content {
         @extend .fluid-box;
-        @extend .h-100;
         background-color: white!important;
 
         p {
@@ -37,6 +36,10 @@
             @include tablet(){
                 font-size: 2rem!important;
             }
+        }
+
+        .navigation__div {
+            margin-bottom: -18px;
         }
     } 
 }
