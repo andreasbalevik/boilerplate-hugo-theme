@@ -2,4 +2,22 @@
     a:before {
         margin-right: 5px;
     }
+
+    @include tablet {
+        width: 100%;
+
+        .nav-link, ul {
+            border: unset!important;
+        }
+
+        .language {
+            position: unset;
+            margin-top: -20px;
+
+            li {
+                margin-bottom:5px;
+            }
+        }
+
+    }
 }
