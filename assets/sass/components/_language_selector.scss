@@ -9,10 +9,9 @@
             padding: 15px 15px;
             text-decoration: none;
             font-size: 1.05rem;
-            color:$secondary-text-color!important;
 
             &:hover {
-                color: $primary-text-color!important;
+                color: $link-text-color!important;
             }
         }
     }

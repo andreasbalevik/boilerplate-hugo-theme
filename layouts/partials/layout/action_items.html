@@ -1,24 +1,27 @@
-{{ with .Site.Params.email }}
-<div>
-    <a class="btn btn-outline bi bi-envelope" href="mailto:{{.}}">
-        {{ i18n "contact-us" }}
-    </a>
-</div>
-{{ end }}
-
-{{ with .Translations }}
-<div class="dropdown">
-    <a class="btn btn-outline dropdown-toggle bi bi-globe2" href="#" role="button"
-        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-        {{ i18n "language" }}
-    </a>
-
-    <ul class="language dropdown-menu" aria-labelledby="dropdownMenuLink">
-        {{ range . }}
-        <li class="language__item dropdown-item">
-            <a href="{{.Permalink}}" class="{{.Language}}">{{.Language.LanguageName | upper}}</a>
+<div class="action__items">
+    <ul class="navbar-nav me-right my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+        {{ with .Site.Params.email }}
+        <li class="nav-item">
+            <a class="nav-link bi bi-envelope" href="mailto:{{.}}">
+                {{ i18n "contact-us" }}
+            </a>
         </li>
-        {{end}}
+        {{ end }}
+
+        {{ with .Translations }}
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle bi bi-globe2" href="#" role="button"
+               id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ i18n "language" }}
+            </a>
+            <ul class="language dropdown-menu" aria-labelledby="dropdownMenuLink">
+                {{ range . }}
+                <li class="language__item dropdown-item">
+                    <a href="{{.Permalink}}" class="{{.Language}}">{{.Language.LanguageName | upper}}</a>
+                </li>
+                {{end}}
+            </ul>
+        </li>
+        {{ end }}
     </ul>
 </div>
-{{ end }}
