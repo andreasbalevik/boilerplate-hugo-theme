@@ -4,9 +4,6 @@
 @import "../../node_modules/bootstrap/scss/_navbar.scss";
 @import "../../node_modules/bootstrap/scss/_dropdown.scss";
 
-@import "variables";
 @import "base/base";
-
-/* override variables */
 @import "layout/_header";
 @import "image/image";

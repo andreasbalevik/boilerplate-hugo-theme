@@ -1,13 +1,49 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-@import "mixin/mixin";
+@import "../mixin/mixin";
+@import "_colors";
+
 
 html {
   font-size: 16px;
 }
 
+
+body {
+  background: white;
+  color: $primary-text-color!important;
+  line-height: 1.66;
+  text-shadow: 0 0 1px transparent;
+  text-rendering: optimizeSpeed;
+}
+
 h1,
-.h1 {
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $primary-heading-color!important;
+
+  font-family: 'Poppins', sans-serif;
   margin-bottom: $spacing-sm;
+
+  font-weight: 600;
+
+  @include tablet() {
+    margin-top: $spacing-sm;
+    margin-bottom: $spacing-xs!important;
+  }
+}
+
+label {
+  color: $primary-text-color!important;
+  opacity: .85;
 }
 
 a,
@@ -39,10 +75,6 @@ p a {
 
 }
 
-p {
-  opacity: .95;
-}
-
 h1+p,
 h1+p+a {
   font-size: 1.4rem!important;
@@ -53,33 +85,8 @@ h1+p+a {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: 'Poppins', sans-serif;
+.h1 {
   margin-bottom: $spacing-sm;
-
-  font-weight: 600;
-
-  @include tablet() {
-    margin-top: $spacing-sm;
-    margin-bottom: $spacing-xs!important;
-  }
 }
 
-body {
-  background: white;
-  color: #1c2f46;
-  line-height: 1.66;
-  text-shadow: 0 0 1px transparent;
-  text-rendering: optimizeSpeed;
-}
 

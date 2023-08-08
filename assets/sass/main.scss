@@ -1,12 +1,10 @@
 @import "vendors/bootstrap";
 @import "vendors/ayouri";
 
-@import "variables";
 @import "mixin/mixin";
-
 @import "base/base";
 
-/* override variables */
+/* layout and components */
 @import "layout/layout";
 @import "elements/elements";
 @import "components/components";
