@@ -67,34 +67,6 @@
     }
 }
 
-.inline-column {
-    .column {
-        display: flex;
-        @include tablet(){
-            display: block;
-        }
-        img {
-            border-bottom-left-radius: 6px;
-            border-top-right-radius: 0;
-            height: 100%;
-            width:100%;
-
-            @include tablet(){
-                border-bottom-left-radius: 0;
-            }
-        }
-
-        &__content {
-            @extend .my-auto;
-            @include desktop(){
-                max-width: 50%;
-            }
-
-            background-color: white;
-        }
-    }
-}
-
 a {
     .column {
         &:hover {
