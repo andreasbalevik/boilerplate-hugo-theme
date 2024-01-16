@@ -1,6 +1,7 @@
 .action__items {
     a:before {
-        margin-right: 5px;
+        margin-right: 3px;
+        font-size: 1.3rem;
     }
 
     @include tablet {

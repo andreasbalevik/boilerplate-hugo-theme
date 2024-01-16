@@ -3,19 +3,11 @@
         background-color: $component-color;
     }
 
-    padding: $spacing-xl 0;
-
-    @include desktop() {
-        padding: $spacing-sm 0;
-    }
+    padding: $spacing-lg 0;
 
     .row {
         @extend .g-3;
     }
 
-    .col-lg-12 + .col-lg-6, .col-lg-6 {
-        h2 {
-            margin-top: $spacing-md;
-        }
-    }
+
 }

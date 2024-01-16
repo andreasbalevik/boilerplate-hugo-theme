@@ -13,14 +13,14 @@
             alt: ""
 */}}
 
-<a href="{{.link.href}}" {{ if not .link.href}} class="pe-none" {{end}}>
-    <div class="column">
+<a href="{{.link.href}}" class="text-reset text-decoration-none {{ if not .link.href}} pe-none{{end}}">
+    <div class="flex-column hover rounded bg-white shadow">
         {{ with .images }}
             {{ partial "components/image-col-6.html" (dict "ctx" . "images" . ) }}
         {{ end }}
 
-        <div class="column__content text-left ">
-            <h3 class>{{.title}}</h3>
+        <div class="p-2">
+            <h3 class="h4">{{.title}}</h3>
 
             {{ with .text }}
                 <p>{{.}}</p>
@@ -28,7 +28,7 @@
 
             {{ with .link }}
                 {{ if .href }}
-                <div class="navigation__div mt-2 text-center">
+                <div class="h3 text-center m-auto">
                     <span class="icon bi bi-arrow-right-short"></span>
                 </div>
                 {{ end }}

@@ -1,6 +1,6 @@
 {{/*
     Usage:
-    {{ partial "images/images-col-12.html" (dict "ctx" . "images" .images ) }}
+    {{ partial "components/image-col-12" (dict "ctx" . "images" .images ) }}
     
     Object:
     images:
@@ -21,7 +21,7 @@
             {{ $counter := 0 }}
             {{ range .images }}
             <div class="carousel-item {{ if eq $counter 0}}active{{end}}" style="background-color: #f0f1f5;">
-                {{ partial "images/image-banner" . }}
+                {{ partial "images/image-banner.html" . }}
             </div>
             {{ $counter = add $counter 1 }}
             {{ end }}
@@ -43,5 +43,5 @@
         </button>
         {{ end }}
     </div>
-</div>
 {{ end }}
+</div>
