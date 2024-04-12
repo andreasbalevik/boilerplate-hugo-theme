@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:500,400,300');
+
 html {
   font-size: 18px;
 }
 
 body {
   font-size-adjust: 0.5;
+  font-family: "Inter", sans-serif;
 }
 
 p, button, label, a {
   font-size: 1.1rem;
   line-height: 1.5;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6), -1px -1px 3px rgba(0, 0, 0, 0.6);
 }

@@ -1,6 +1,6 @@
 .banner {
     background-color: $banner-color;
-    padding: $spacing-xl 0;
+    padding: $spacing-lg 0;
 
     @include tablet(){
         padding: $spacing-md 0;

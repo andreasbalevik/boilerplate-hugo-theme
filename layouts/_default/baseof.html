@@ -5,30 +5,27 @@
 
     <title>
         {{ block "title" . }}
-        {{ if not .Page.IsHome }}
-            {{.Page.Title}} | {{ .Site.Title }}
-        {{ else }}
-        {{ .Site.Title }}
-        {{ end }}
+            {{ if not .Page.IsHome }}
+                {{.Page.Title}} | {{ .Site.Title }}
+            {{ else }}
+                {{ .Site.Title }}
+            {{ end }}
         {{ end }}
     </title>
+    
     {{ partial "seo/links.html" . }}
     {{ partial "seo/meta.html" . }}
 
 </head>
 
 <body>
-
     {{ partial "layout/header.html" . }}
-
     <main>
         {{ block "main" . }}
         {{end}}
     </main>
-
-    {{ partial "accessibillity/to-top-button.html" . }}
+    {{ partial "accessibillity/scroll-top-button.html" . }}
     {{ partial "layout/footer.html" . }}
-
 </body>
 
 {{ partial "seo/schema.html" . }}
