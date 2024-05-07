@@ -1,0 +1,9 @@
+.hover {
+    border: 2px solid lightgray!important;
+
+    &:hover {
+        transition: all 0.05s ease-in-out;
+        border-color: rgb(35, 35, 35)!important;
+        background: rgb(232, 248, 255)!important;
+    }
+}

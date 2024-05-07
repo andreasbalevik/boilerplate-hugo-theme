@@ -1,0 +1,6 @@
+a .border {
+    &:hover {
+        transition: all 0.05s ease-in-out;
+        border-color: black!important;
+    }
+}
